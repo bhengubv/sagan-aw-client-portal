@@ -1,3 +1,6 @@
+<a id="en"></a>
+**English** · [Português](#pt)
+
 # Setup — AW Client Report Portal
 
 Get the portal running on your machine in about **5 minutes**, then click through the full
@@ -108,3 +111,123 @@ accounts, follow the implementation docs:
 - **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** — hosting, Postgres, secrets, scheduled jobs
 - **[docs/PROVIDERS.md](docs/PROVIDERS.md)** — connect each real provider (credentials, OAuth)
 - **[docs/OPERATIONS.md](docs/OPERATIONS.md)** — day-to-day runbook
+
+<br>
+
+---
+
+<br>
+
+<a id="pt"></a>
+[English](#en) · **Português**
+
+# Configuração — AW Client Report Portal
+
+Coloque o portal para rodar no seu computador em cerca de **5 minutos** e percorra a
+demonstração completa (preenchimento automático → gerar → distribuir). Tudo roda localmente —
+nada é implantado e nenhuma conta real é acessada.
+
+---
+
+## Pré-requisitos
+
+- **Python 3.10+** — verifique com `python --version` (macOS/Linux: `python3 --version`)
+- **Git** — para clonar o repositório
+- ~200 MB de espaço em disco
+
+---
+
+## 1 · Baixe o código
+
+```bash
+git clone https://github.com/bhengubv/sagan-aw-client-portal.git
+cd sagan-aw-client-portal
+```
+
+## 2 · Crie um ambiente virtual e instale
+
+**Windows (PowerShell)**
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+**macOS / Linux**
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+> Daqui em diante, `PY` significa o Python do seu venv:
+> Windows → `.\.venv\Scripts\python.exe` · macOS/Linux → `.venv/bin/python`
+
+## 3 · Carregue os dados de demonstração
+
+```bash
+PY seed.py
+```
+Cria duas empresas de demonstração, sete provedores conectados e um cliente totalmente vinculado.
+
+## 4 · Inicie os dois servidores (dois terminais)
+
+**Terminal 1 — o sandbox de provedores** (alimenta o preenchimento automático):
+```bash
+PY run_sandbox.py        # http://127.0.0.1:5050
+```
+
+**Terminal 2 — o portal**:
+```bash
+PY run.py                # http://127.0.0.1:5000
+```
+
+## 5 · Abra e faça login
+
+Acesse **http://127.0.0.1:5000** e faça login:
+
+| Login | Senha | Função |
+|---|---|---|
+| `owner@firm.test` | `changeme123` | Proprietário (acesso total) |
+| `planner@firm.test` | `changeme123` | Planejador |
+| `assistant@firm.test` | `changeme123` | Assistente |
+| `superadmin@firm.test` | `changeme123` | Administrador da plataforma (console Admin) |
+| `northwind@firm.test` | `changeme123` | Uma segunda empresa |
+
+Novas empresas também podem se cadastrar em **`/signup`**.
+
+## 6 · Experimente o fluxo completo
+
+1. Abra **The Sample Household** → clique em **Gerar relatório**.
+2. Veja o formulário **preencher ~9 saldos** automaticamente pelos provedores conectados (cada um marcado com sua origem).
+3. Preencha o único campo restante (o saldo da hipoteca) → **Gerar relatório**.
+4. **Baixe** os PDFs SACS e TCC, **envie por e-mail** ou **salve no Dropbox**.
+5. Veja o uso medido em **Faturamento** e faça login como `superadmin@firm.test` para o console **Admin**.
+
+---
+
+## Rodando os testes
+
+A suíte de testes já está instalada — é só rodar:
+```bash
+PY -m pytest             # 104 testes, ~40s
+```
+
+## Solução de problemas
+
+| Sintoma | Solução |
+|---|---|
+| O preenchimento automático vem vazio | O **sandbox (:5050) não está rodando** — inicie `PY run_sandbox.py` em um terminal próprio. |
+| "Address already in use" / porta ocupada | Algo já está usando `5000`/`5050`. Pare esse processo ou mude a porta em `run.py` / `run_sandbox.py`. |
+| Quer uma demonstração limpa de novo | Apague `instance/aw_portal.db` e rode `PY seed.py` novamente. |
+| Erros de SSL/permissão no `pip install` | Garanta que o venv está sendo usado (`PY`) e que você está no Python 3.10+. |
+
+---
+
+## Colocando em produção
+
+Localmente é uma **demonstração** apoiada por um sandbox de provedores. Para implantar e conectar
+contas **reais** de bancos/custodiantes, siga os documentos de implementação:
+
+- **[docs/IMPLEMENTATION_HANDOFF.md](docs/IMPLEMENTATION_HANDOFF.md)** — comece por aqui
+- **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** — hospedagem, Postgres, segredos, tarefas agendadas
+- **[docs/PROVIDERS.md](docs/PROVIDERS.md)** — conecte cada provedor real (credenciais, OAuth)
+- **[docs/OPERATIONS.md](docs/OPERATIONS.md)** — manual do dia a dia
