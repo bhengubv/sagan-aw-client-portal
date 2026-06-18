@@ -45,7 +45,7 @@ Pixel-perfect **SACS** (cash-flow) and **TCC** (net-worth) PDFs — exactly the 
 
 ▶️ **[Watch the 2-minute walkthrough](#)**  *(drop your Loom link here)*
 
-Want to click around yourself? It runs locally in three commands — see **For developers** below.
+Want to click around yourself? **[Get it running in 5 minutes → SETUP.md](SETUP.md)**
 
 ---
 
