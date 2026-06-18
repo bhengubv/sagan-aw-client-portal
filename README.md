@@ -9,25 +9,76 @@ Pull every balance from your banks and custodians **automatically**, let the sys
 
 ---
 
-## 1 · Open a client, hit *Generate* — the numbers fill themselves
+## How it works
 
+**1 · Open a client, hit *Generate* — the numbers fill themselves.**
 The portal reaches into **Plaid, Schwab, RightCapital, Zillow and Pinnacle**, pulls the balances, and shows you **exactly where each number came from**. Anything it can't reach, it flags — so you never hunt for a figure again.
 
 ![Balances auto-filled from your connected providers, each tagged with its source](docs/img/autofill.png)
 
-## 2 · One click, and the math is done
-
-Inflows, outflows, retirement, the trust, liabilities, net worth — **every total calculated and re-checked for you**, every time. No more double-checking numbers at 9pm.
+**2 · One click, and the math is done.**
+Inflows, outflows, retirement, the trust, liabilities, net worth — **every total calculated and re-checked for you**.
 
 ![Report ready — every total computed, ready to download or send](docs/img/review.png)
 
-## 3 · Your reports, your format
-
-Pixel-perfect **SACS** (cash-flow) and **TCC** (net-worth) PDFs — exactly the way Andrew built them. Download, email to the client, or drop straight into Dropbox.
+**3 · Your reports, your format.**
+Pixel-perfect **SACS** (cash-flow) and **TCC** (net-worth) PDFs — exactly the way Andrew built them. Download, email, or save to Dropbox.
 
 | Cash-flow (SACS) | Net-worth (TCC) |
 |:--:|:--:|
 | ![SACS cash-flow report](docs/img/report-sacs.png) | ![TCC net-worth report](docs/img/report-tcc.png) |
+
+---
+
+# 🚀 Try it on your computer — in about 5 minutes
+
+> You only need **Python** installed first (it's free — [download it here](https://www.python.org/downloads/), version 3.10 or newer). Then follow the steps below, copying each block into a terminal/PowerShell window.
+
+### Step 1 — Get the files
+**[⬇️ Download the ZIP](https://github.com/bhengubv/sagan-aw-client-portal/archive/refs/heads/main.zip)** and unzip it, then open a terminal **inside that folder**.
+*(Prefer git? `git clone https://github.com/bhengubv/sagan-aw-client-portal.git` then `cd sagan-aw-client-portal`.)*
+
+### Step 2 — Install it (one time)
+**Windows (PowerShell):**
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+**Mac / Linux:**
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+### Step 3 — Load the demo data
+```powershell
+.\.venv\Scripts\python.exe seed.py
+```
+*(Mac/Linux: `.venv/bin/python seed.py`)*
+
+### Step 4 — Start it (two terminal windows, leave both open)
+**Window 1** — the data service:
+```powershell
+.\.venv\Scripts\python.exe run_sandbox.py
+```
+**Window 2** — the portal:
+```powershell
+.\.venv\Scripts\python.exe run.py
+```
+
+### Step 5 — Open it
+Go to **http://127.0.0.1:5000** in your browser and sign in:
+
+| Email | Password |
+|---|---|
+| **owner@firm.test** | **changeme123** |
+
+*(Other logins: `planner@firm.test`, `assistant@firm.test`, `superadmin@firm.test` for the admin view — all `changeme123`.)*
+
+### Step 6 — See the magic
+Open **The Sample Household → Generate report**. Watch the balances **fill in by themselves**, type the one remaining number, click **Generate**, and download your SACS & TCC reports. 🎉
+
+> **Stuck?** Most common fix: if the balances don't auto-fill, make sure **Window 1 (`run_sandbox.py`) is still running**. Full troubleshooting → **[SETUP.md](SETUP.md)**.
 
 ---
 
@@ -39,92 +90,26 @@ Pixel-perfect **SACS** (cash-flow) and **TCC** (net-worth) PDFs — exactly the 
 - **🔒 Secure by design.** Read-only access, your data stays yours, and **nothing is ever used to train an AI**.
 - **📈 Grow without hiring.** Take on more clients without adding headcount.
 
-> It's already built, fully tested, and ready to connect to your accounts.
+## ▶️ See the 2-minute walkthrough
 
-## See it in action
-
-▶️ **[Watch the 2-minute walkthrough](#)**  *(drop your Loom link here)*
-
-Want to click around yourself? **[Get it running in 5 minutes → SETUP.md](SETUP.md)**
+**[Watch the walkthrough](#)**  *(drop your Loom link here)*
 
 ---
 
-<details>
-<summary><strong>🔧 For developers &amp; the implementation team</strong> — setup, architecture, tests, go-live</summary>
+## Under the hood
 
-<br>
+Built to the full Technical Specification — **all four phases, every element functional, 104 automated tests passing.**
 
-A multi-tenant SaaS platform for financial-advisory firms: enter (or auto-fetch) client data,
-generate quarterly **SACS** and **TCC** PDFs, distribute them, and run the firm — with an AI
-agent layer, billing, and admin. Built to the full Technical Specification — **all four phases,
-every element functional, 104 tests green**.
+- **Phase 1 — Portal core:** client management, the deterministic calculation engine, fixed-layout SACS & TCC PDFs, secure login with two-factor, audit log.
+- **Phase 2 — Integrations:** an encrypted credential vault and read-only connectors for **Plaid, Schwab, RightCapital, Zillow, Pinnacle, PreciseFP** (+ Dropbox/Canva), with a built-in sandbox so it runs end-to-end before any real account is connected.
+- **Phase 3 — AI & client-facing:** statement reading, anomaly flagging, automated client onboarding & reminders, an expense worksheet, and report distribution by email/Dropbox/Canva.
+- **Phase 4 — Multi-firm platform:** self-serve sign-up, per-firm branding, usage billing, and an admin console.
 
-### Quick start
+**Run the tests:** `.\.venv\Scripts\python.exe -m pytest` (104 tests, ~40s).
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe seed.py            # 2 demo firms, providers connected, demo client
-.\.venv\Scripts\python.exe run_sandbox.py     # (separate terminal) provider sandbox :5050
-.\.venv\Scripts\python.exe run.py             # the portal :5000
-```
+### Going live (for the implementation team)
 
-Sign in as `owner@firm.test` / `changeme123` → a client → **Generate report**. The form
-auto-fills ~9 fields from the connected providers (real HTTP to the bundled sandbox); fill the
-one manual field, generate, then email / save-to-Dropbox / export-to-Canva. `superadmin@firm.test`
-opens the Admin console; new firms self-register at `/signup`.
-
-### What's built (all four phases)
-
-- **Phase 1 — Portal core.** Client/account management, guided report workflow with a hard
-  completeness gate, the deterministic calculation engine (spec §9, exhaustively tested),
-  fixed-layout SACS &amp; TCC PDF generation, auth + RBAC + TOTP MFA, audit log.
-- **Phase 2 — Integrations.** Encrypted credential **vault** (Fernet) and read-only adapters for
-  **Plaid, Schwab, RightCapital, Zillow, Pinnacle, PreciseFP** (+ **Dropbox/Canva** output),
-  with a bundled **provider sandbox** that implements each real API contract so it runs end-to-end in dev.
-- **Phase 3 — AI agents &amp; client-facing.** Statement **extraction** (deterministic; LLM optional
-  via Anthropic), **anomaly flagging**, an **onboarding agent** (invites/reminders/escalation),
-  client-facing **onboarding form** and **expense worksheet**, and **distribution** (email, Dropbox, Canva).
-- **Phase 4 — Multi-tenant SaaS.** Self-serve **signup**, per-tenant branding, **usage metering +
-  billing** (cost + 20%), **admin console**, and tenant **suspension**.
-
-### Tests
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest             # 104 tests
-```
-Covers the calc engine + critical rules, PDF content, all routes/RBAC/tenant-isolation, the
-vault, every provider adapter (driven through the real sandbox), the AI agents, distribution,
-billing, and admin.
-
-### Taking it live
-
-Going to production is **configuration + live credentials, not new architecture.** Start here:
-
-- **[docs/IMPLEMENTATION_HANDOFF.md](docs/IMPLEMENTATION_HANDOFF.md)** — the entry point
-- **[docs/PROVIDERS.md](docs/PROVIDERS.md)** — per-provider go-live (creds, endpoints, OAuth/refresh)
-- **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** — Railway, Postgres, secrets, scheduled jobs
-- **[docs/OPERATIONS.md](docs/OPERATIONS.md)** — runbook (users/MFA, Outbox, reminders, billing, backups)
-- **[.env.example](.env.example)** — every environment variable
-- **[livetests/](livetests/)** — `pytest livetests/` validates each adapter against its real API
-
-### Layout
-
-```
-app/
-  calc/ pdf/ reporting.py     # deterministic engine + PDF renderers + glue
-  vault.py providers/ integrations.py   # credential vault, adapters, fetch
-  agents/                     # anomaly, extraction, llm, onboarding
-  mailer.py distribution.py portal_public.py staff.py settings.py
-  billing.py signup.py admin.py
-  models.py auth.py clients.py reports.py security.py audit.py
-sandbox/   # local provider sandbox (real API contracts)
-tests/     # 104 tests
-seed.py manage.py run.py run_sandbox.py
-```
-
-**Notes** — Adapters call a provider `base_url`: the bundled sandbox in dev, the live API in
-prod (no code change). The LLM never touches the numeric path. PDFs use ReportLab; exact visual
-parity with the firm's templates needs their sample PDFs.
-
-</details>
+Local is a demo backed by a sandbox. To deploy it and connect **real** accounts, start with
+**[docs/IMPLEMENTATION_HANDOFF.md](docs/IMPLEMENTATION_HANDOFF.md)** —
+then [DEPLOYMENT.md](docs/DEPLOYMENT.md), [PROVIDERS.md](docs/PROVIDERS.md), and [OPERATIONS.md](docs/OPERATIONS.md).
+Full local setup & troubleshooting is in **[SETUP.md](SETUP.md)**.
