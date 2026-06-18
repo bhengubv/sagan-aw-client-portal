@@ -1,3 +1,5 @@
+**English** · [Português](README.pt.md) 🇧🇷
+
 # AW Client Report Portal
 #### built by **Sagan**
 
