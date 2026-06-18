@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Sign in · AW Portal{% endblock %}
+{% block body %}
+<div class="center card">
+  <h1>Sign in</h1>
+  <p class="muted">AW Client Report Portal</p>
+  <form method="post">
+    <div class="field"><label>Email</label><input type="email" name="email" autofocus required></div>
+    <div class="field"><label>Password</label><input type="password" name="password" required></div>
+    <button class="btn" type="submit" style="width:100%">Sign in</button>
+  </form>
+  <p class="muted" style="margin-top:10px">New firm? <a href="{{ url_for('signup.signup') }}">Start your workspace</a></p>
+</div>
+{% endblock %}

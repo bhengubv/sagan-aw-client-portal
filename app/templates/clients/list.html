@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Clients · AW Portal{% endblock %}
+{% block body %}
+<div class="section-head">
+  <h1>Clients</h1>
+  <a class="btn" href="{{ url_for('clients.new_client') }}">+ New client</a>
+</div>
+<div class="card">
+  {% if clients %}
+  <table>
+    <thead><tr><th>Household</th><th>People</th><th>Status</th><th>Last report</th><th></th></tr></thead>
+    <tbody>
+    {% for c in clients %}
+      <tr>
+        <td><a href="{{ url_for('clients.detail', cid=c.id) }}"><strong>{{ c.display_name }}</strong></a></td>
+        <td>{{ c.persons|map(attribute='name')|join(', ') or '—' }}</td>
+        <td>{{ c.status }}</td>
+        <td>{% if c.last_report %}{{ c.last_report.period }} <span class="muted">({{ c.last_report.created_at.date() }})</span>{% else %}<span class="muted">none</span>{% endif %}</td>
+        <td style="text-align:right"><a class="btn small" href="{{ url_for('reports.new_report', cid=c.id) }}">Generate report</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p class="muted">No clients yet. <a href="{{ url_for('clients.new_client') }}">Create the first one.</a></p>
+  {% endif %}
+</div>
+{% endblock %}

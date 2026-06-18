@@ -1,0 +1,2300 @@
+1
+00:01:48,459 --> 00:02:35,379
+Hello. Hello. How's it going? Sorry for keeping you in the meeting in the meeting in the waiting
+
+2
+00:02:35,379 --> 00:02:40,900
+room for too long. Listen back to back today. How are you guys doing? No problem. We're doing
+
+3
+00:02:40,900 --> 00:02:46,979
+good. Thank you. What about you? I am doing well. I don't think we've met. I'm Zaki. I run the AI
+
+4
+00:02:46,979 --> 00:02:52,659
+practice here. I'm just starting off like it's been a few days so very new at this but run the AI
+
+5
+00:02:52,659 --> 00:02:57,699
+practice at Sagan. Excited about having this call with you guys. I reviewed the original call. I
+
+6
+00:02:57,699 --> 00:03:04,580
+think that you guys had with John and Zach. With John? Yep. Yes. Perfect. And yeah, I'm just
+
+7
+00:03:04,580 --> 00:03:10,340
+jumping in and we were about to start your build. So I'd love to have any chance to get more context
+
+8
+00:03:10,340 --> 00:03:15,300
+before we start developing is always good. So I'm happy to meet you guys. Perfect. Great to meet
+
+9
+00:03:15,300 --> 00:03:20,020
+you too, Zaki. Thank you so much for taking the time to meet with us today. We really appreciate
+
+10
+00:03:20,659 --> 00:03:27,840
+it. Just a heads up, it's quite a complicated complex process. There are a lot of moving parts.
+
+11
+00:03:27,840 --> 00:03:36,479
+We were filling out the data point document for you. And we were just thinking literally we said,
+
+12
+00:03:36,479 --> 00:03:43,199
+I don't know how we're going to automate this. We're just going to trust your AI wizardry in
+
+13
+00:03:43,199 --> 00:03:51,759
+it because we have no clue on how that's going to work. But we do have a good starting point I
+
+14
+00:03:51,759 --> 00:04:02,080
+shared with you some documents with the templates basically on what we use. Did you walk through
+
+15
+00:04:02,080 --> 00:04:05,280
+it together? I'd love to get more context. I'm recording this too. So that'd be really good
+
+16
+00:04:05,280 --> 00:04:08,240
+input for it. Absolutely. Let me pull.
+
+17
+00:04:15,680 --> 00:04:24,959
+Just want to make sure I'm not. I want to use the ones that we've cleared client information from.
+
+18
+00:04:27,120 --> 00:04:30,959
+I put samples in our shared Dropbox today. Use those.
+
+19
+00:04:31,680 --> 00:04:34,720
+Yes, amazing. Fantastic.
+
+20
+00:04:54,850 --> 00:04:57,250
+In the onboarding materials folder.
+
+21
+00:05:05,220 --> 00:05:09,620
+Start with the SACS, which is like the first one we opened.
+
+22
+00:05:17,250 --> 00:05:20,959
+Okay. Let me move this because I can't see.
+
+23
+00:05:20,959 --> 00:05:32,990
+Okay. So I'm actually going to let Rebecca, if you're okay with it, Rebecca, to run through it.
+
+24
+00:05:32,990 --> 00:05:41,250
+Absolutely. Okay. So basically this is describing the way we like our clients to
+
+25
+00:05:42,449 --> 00:05:47,250
+have their banking. So we like them to have an inflow bank account, an outflow bank account,
+
+26
+00:05:47,250 --> 00:05:51,730
+and then a private reserve, which Marianne can scroll down a little bit. I can't, but there.
+
+27
+00:05:52,449 --> 00:05:59,279
+So the numbers in green at the top left, we will put the client's name and their salary,
+
+28
+00:05:59,279 --> 00:06:05,199
+like their actual dollars that come in after taxes because they'll make more and then taxes
+
+29
+00:06:05,199 --> 00:06:12,139
+come out. So those numbers are kind of set except for when they get a new job or maybe once a year
+
+30
+00:06:12,139 --> 00:06:16,220
+if they get a cost of living raise or something. So those don't change often. It's not a big deal
+
+31
+00:06:16,220 --> 00:06:24,220
+for us to manage those. And then the inflow number matches that. Everything that they make
+
+32
+00:06:24,220 --> 00:06:27,629
+goes into the inflow number, into the inflow number.
+
+33
+00:06:27,629 --> 00:06:31,230
+Inflow's coming in through right capital or precise FB, right? Those are the two tools we're using.
+
+34
+00:06:32,670 --> 00:06:33,310
+Inflow.
+
+35
+00:06:34,610 --> 00:06:35,730
+Like where does this data come in?
+
+36
+00:06:35,730 --> 00:06:41,810
+We are using those, but the inflow numbers should not change except again, yearly. Like
+
+37
+00:06:41,810 --> 00:06:46,050
+if their tax withdrawals change, if they get a raise, things like that. So that number should be
+
+38
+00:06:46,610 --> 00:06:52,129
+set. The little numbers at the bottom of the accounts that say $1,000 floor, that never
+
+39
+00:06:52,129 --> 00:06:58,910
+changes. We like them to have a $1,000 buffer in their accounts. So that number just stays the same.
+
+40
+00:07:03,649 --> 00:07:06,910
+Nice. Will you put us back on that screen, Marianne?
+
+41
+00:07:07,470 --> 00:07:10,829
+Yep. I was trying to have this other one next to it.
+
+42
+00:07:10,829 --> 00:07:14,350
+So I knew where the data was coming from, but I can't do it.
+
+43
+00:07:14,430 --> 00:07:21,790
+You're good. You're good. Okay. So then again, like this is hard for me to think of how we can
+
+44
+00:07:21,790 --> 00:07:27,949
+automate this at all because of the way we do it. But the red arrow with the X and it says
+
+45
+00:07:27,949 --> 00:07:36,589
+$12,000 a month, that number is based off of a budgeting worksheet that we give them.
+
+46
+00:07:36,589 --> 00:07:42,990
+So we know what a normal month of expenses and spending is. And then we take that and we plug
+
+47
+00:07:42,990 --> 00:07:48,110
+that in and we automate a transfer at their bank from their inflow to their outflow for
+
+48
+00:07:48,110 --> 00:07:56,350
+that amount every month. And then the blue arrow going down is simply the excess between the inflow
+
+49
+00:07:56,350 --> 00:08:02,269
+and outflow. So I guess it could be automated in the sense that we could just enter in the
+
+50
+00:08:02,269 --> 00:08:07,579
+info and it could be plugged in. Oh, yeah, absolutely. I think we could definitely do
+
+51
+00:08:07,579 --> 00:08:14,060
+this one pretty easily. In fact, we can make it pretty dynamic too, I think. It could account
+
+52
+00:08:14,060 --> 00:08:21,819
+for those changes, raises. That would be amazing because occasionally there's been an error when
+
+53
+00:08:21,819 --> 00:08:27,100
+we forget to change the number in the blue arrow or something like that. Okay, go to the second
+
+54
+00:08:27,100 --> 00:08:38,659
+page, please. So this one, usually the light blue says private reserve and that's basically
+
+55
+00:08:38,659 --> 00:08:46,259
+just their high yield savings account. And this one actually doesn't have the target on it,
+
+56
+00:08:46,259 --> 00:08:52,740
+but that's okay. Usually, Marianne, point to where the target is. Usually we input another
+
+57
+00:08:52,740 --> 00:08:59,460
+number there just in black and it's six months of their normal expenses based off that same
+
+58
+00:08:59,460 --> 00:09:05,620
+worksheet we used above and all of their insurance deductibles. So if they have a $1,000 car
+
+59
+00:09:05,620 --> 00:09:11,539
+deductible, $2,000 home deductible, $1,000 health deductible, we'll add all of that together
+
+60
+00:09:12,340 --> 00:09:16,259
+with six times their monthly expense and then that's their target for their savings.
+
+61
+00:09:16,980 --> 00:09:24,820
+So the number that says $75,000 right now, that is where we put in their balance.
+
+62
+00:09:24,820 --> 00:09:29,779
+And we get their balance on that account from their bank two days before the appointment
+
+63
+00:09:29,779 --> 00:09:35,419
+when we're creating the paperwork or the documents. The investment account,
+
+64
+00:09:36,590 --> 00:09:46,190
+that is usually from Schwab, Charles Schwab, and only two of us have authorization to go retrieve
+
+65
+00:09:46,190 --> 00:09:55,549
+that number because of security compliance. So myself or Andrew, our boss, we will go get that
+
+66
+00:09:55,549 --> 00:10:00,909
+number the day or two days before the appointment and then we have that number to put in. So that's
+
+67
+00:10:00,909 --> 00:10:09,279
+just their balance right there, the $15,000. So that is SACS. That's kind of the simpler one.
+
+68
+00:10:12,899 --> 00:10:22,450
+Interesting. Yeah, I'm just looking through the bills that we had. I think what you guys
+
+69
+00:10:22,450 --> 00:10:29,090
+already talked to John about, it's similar to that. I think you're all close. I do think that we could
+
+70
+00:10:29,090 --> 00:10:35,519
+make it like visually more appealing to the template here. I guess taking a step back,
+
+71
+00:10:35,519 --> 00:10:40,320
+would you want this to be like, is the vision here to generate like a final PDF one click
+
+72
+00:10:40,879 --> 00:10:44,320
+or to create a draft where we still have to do a little bit of work? Because Rebecca,
+
+73
+00:10:44,799 --> 00:10:51,519
+you log into Schwab as an agent to the customer, pull that data out. You could automate all of that
+
+74
+00:10:51,519 --> 00:10:56,399
+while respecting the rules, like the Schwab login is not a team login and all that good stuff.
+
+75
+00:10:56,960 --> 00:11:02,210
+What's the vision that we're sort of chasing? Like really good for you guys is the first step,
+
+76
+00:11:02,210 --> 00:11:10,980
+I guess. So I guess we should say that our boss Andrew created these documents and it took him
+
+77
+00:11:10,980 --> 00:11:17,379
+a very long time and he is happy with the way they look. So we're not looking to change the
+
+78
+00:11:17,379 --> 00:11:22,419
+appearance. This one actually is green. It's just the sample. It is in blue, our company colors.
+
+79
+00:11:23,779 --> 00:11:32,379
+But I don't think he is looking for a visual change, but Marianne take it away because I
+
+80
+00:11:32,460 --> 00:11:44,289
+was not involved in the start of this. So what? Well, if we could do a sample of what it could
+
+81
+00:11:44,289 --> 00:11:49,490
+look like without changing it too much, but just like, Hey, we're working with your format.
+
+82
+00:11:49,490 --> 00:11:55,649
+We love your format, but we're just sharing this for inspiration in case you want to use
+
+83
+00:11:55,649 --> 00:11:59,809
+any of these other like, I don't know. Yeah, I'm not even advocating for like a
+
+84
+00:11:59,809 --> 00:12:03,409
+visual changes. I'm just, I was just curious, like what you guys are hoping to do. Yeah.
+
+85
+00:12:03,409 --> 00:12:06,450
+Can you talk me through this screen? Cause this has got a lot more data coming in as
+
+86
+00:12:06,450 --> 00:12:11,409
+you know, from a bunch of different accounts and processes. So I'm, I do stuff on like on
+
+87
+00:12:11,409 --> 00:12:23,169
+your first page. Okay. Yeah. So first page. I guess top of my mind, both of them, we have
+
+88
+00:12:23,169 --> 00:12:28,769
+to manually input all the information. Everything. Yeah. So that would be a great
+
+89
+00:12:28,769 --> 00:12:35,730
+thing to move away from where maybe we have a list, you know, like a sidebar where we input
+
+90
+00:12:35,730 --> 00:12:40,850
+the information and it just automatically drops it into the PDF instead of us having to work with
+
+91
+00:12:40,850 --> 00:12:45,570
+the format and making sure that everything is aligned. And because that is a big thing on this,
+
+92
+00:12:45,570 --> 00:12:54,289
+if we move something, especially with the circle chart, this one gets moved and like the format
+
+93
+00:12:54,289 --> 00:13:10,990
+gets, I don't know. This one's in Canva. How often do you guys move things around here? Like
+
+94
+00:13:10,990 --> 00:13:15,470
+I build this thing in Canva and now I want to move this green bubble to the right and the
+
+95
+00:13:15,470 --> 00:13:19,870
+red bubble to the left, for example. We don't, we're not allowed to, we're not allowed to.
+
+96
+00:13:20,830 --> 00:13:25,710
+Okay. I did forget to tell you one thing where it says client example at the top.
+
+97
+00:13:26,909 --> 00:13:31,870
+You put the client's name and the date up there. So that's another thing we have to remember to
+
+98
+00:13:31,870 --> 00:13:36,269
+change every time. I'd love like you to send me like a PDF example of a final client, like with
+
+99
+00:13:36,269 --> 00:13:40,590
+the goal and the date and all that stuff. So we can like find, like we can align around that.
+
+100
+00:13:40,590 --> 00:13:43,710
+Do you like Canva more or do you like to do this in Word more? I can see a world
+
+101
+00:13:43,710 --> 00:13:52,750
+where we don't want to do it either. We want the form set so nothing can move. Because if you look
+
+102
+00:13:52,750 --> 00:14:01,789
+like where it says private reserve, the line is always off center. We just need it like set.
+
+103
+00:14:04,019 --> 00:14:08,500
+I like it. I'm going to, okay. I think I have an idea here. Like this could be,
+
+104
+00:14:08,500 --> 00:14:11,779
+this could be super interesting. And I like the idea of like we'll give you a little landing,
+
+105
+00:14:11,940 --> 00:14:21,039
+a little URL, a little app. It'll have like, hey, new report, right? And struggling to think
+
+106
+00:14:21,039 --> 00:14:25,279
+where we start from, like, and I want to like talk about that. Like where that client data,
+
+107
+00:14:25,279 --> 00:14:29,120
+how do you decide when to create a report for a client and where that client, like you would do
+
+108
+00:14:29,120 --> 00:14:35,039
+one for every customer that you have? So it depends on where the client is at on his process
+
+109
+00:14:35,039 --> 00:14:43,620
+with us. The ones that are already on, we have one that's on onboarding, for example,
+
+110
+00:14:43,620 --> 00:14:48,500
+the timeline of those meetings are going to change a little bit. But once they're settled with us,
+
+111
+00:14:48,500 --> 00:14:54,419
+and correct me if I'm wrong, Rebecca, but after like a year, they have quarterly meetings. And
+
+112
+00:14:55,059 --> 00:15:00,019
+there might be changes in that we might be meeting with them a little bit sooner or
+
+113
+00:15:00,740 --> 00:15:08,580
+on the later side. But once they're like, in depth with us, and we already have this system
+
+114
+00:15:08,580 --> 00:15:12,980
+down for them, then they're quarterly meetings every three months. You don't generate this
+
+115
+00:15:12,980 --> 00:15:18,340
+every month for them and send it to them by email. We do this for every client meeting.
+
+116
+00:15:18,899 --> 00:15:23,460
+So quarterly. But these numbers are monthly though, right? So this is like, hey,
+
+117
+00:15:23,460 --> 00:15:28,179
+here's what every month looks like. And then you make those transfers every month, of course.
+
+118
+00:15:28,980 --> 00:15:35,779
+Yes, because it's generally set, we build into their budget worksheet, we build in
+
+119
+00:15:37,220 --> 00:15:42,740
+a little excess, like any number they give us, we round up. Our clients are high net worth,
+
+120
+00:15:42,740 --> 00:15:47,620
+they're all millionaires. So they don't miss a few dollars here and there, you know.
+
+121
+00:15:47,620 --> 00:15:53,379
+So we round up in their budget every month. So this is extra, like whatever number is going to
+
+122
+00:15:53,379 --> 00:15:58,259
+their outflow, they don't have to be careful and watch every penny. So it stays the same generally,
+
+123
+00:15:58,820 --> 00:16:01,779
+and then any excess will be transferred out into their private reserve.
+
+124
+00:16:02,799 --> 00:16:07,200
+Cool. Yeah, I was just like, I mean, this is not for right now, but like for future,
+
+125
+00:16:07,200 --> 00:16:10,559
+like one thing we could do, since we're doing this, if we get this automated, you could just
+
+126
+00:16:10,559 --> 00:16:13,600
+send it to them by email every month, right? Here's what your numbers look like this month,
+
+127
+00:16:13,600 --> 00:16:17,039
+and you don't have to even wait for that three-monthly meeting to happen, right? Like,
+
+128
+00:16:17,039 --> 00:16:21,279
+just an idea. But let's try to get it to a point where it's like super easy to generate,
+
+129
+00:16:21,279 --> 00:16:26,080
+and then, you know, we can do more of it. Cool, very cool. Can we scroll down? I'm just curious
+
+130
+00:16:26,080 --> 00:16:32,779
+about the, well, or not scroll down, sorry, I meant the second report. I want to understand
+
+131
+00:16:32,779 --> 00:16:36,779
+each component or each box there. If you can make this slightly larger, that would be helpful too.
+
+132
+00:16:36,779 --> 00:16:38,379
+Yeah, yeah. All right.
+
+133
+00:16:38,379 --> 00:16:40,620
+That's your savings, time and accounts.
+
+134
+00:16:41,419 --> 00:16:46,059
+So let me walk you through this. So again, we have the name and date of the client in the
+
+135
+00:16:46,059 --> 00:16:51,659
+top left corner. And then those green bubbles, we have, they're usually, most of our clients are
+
+136
+00:16:51,659 --> 00:16:56,620
+married. So we have the spouses names, their age, their date of birth, the last four of
+
+137
+00:16:56,620 --> 00:17:01,100
+their social, and those don't really change other than the age. That would be nice to auto update
+
+138
+00:17:01,100 --> 00:17:09,809
+per year. Then in the upper left quadrant, I don't know where you are located.
+
+139
+00:17:11,329 --> 00:17:11,890
+So I don't know.
+
+140
+00:17:12,769 --> 00:17:13,250
+Austin.
+
+141
+00:17:13,329 --> 00:17:18,660
+Okay, great. So you are familiar with Mexico.
+
+142
+00:17:21,700 --> 00:17:25,059
+Marianne's in Mexican, but from, lives in France right now.
+
+143
+00:17:26,500 --> 00:17:27,059
+You guys win.
+
+144
+00:17:29,220 --> 00:17:32,180
+I'm American living in Mexico. She's Mexican living in France.
+
+145
+00:17:33,220 --> 00:17:36,980
+I'm Pakistani in Austin by way of Singapore in Montreal.
+
+146
+00:17:37,619 --> 00:17:38,099
+Wow.
+
+147
+00:17:42,099 --> 00:17:43,859
+I'd rather be in France and Mexico, but hey.
+
+148
+00:17:45,220 --> 00:17:46,339
+All right, cool. So retirement?
+
+149
+00:17:46,339 --> 00:17:50,339
+I don't know. I do love Austin. Homeslice Pizza is one of my favorite places.
+
+150
+00:17:50,339 --> 00:17:55,539
+So good. I used to live in California and that was, you know, from a, this report would make
+
+151
+00:17:55,539 --> 00:17:59,859
+me very nervous every month and I would get it from my accountant. It was like taxes would be
+
+152
+00:17:59,940 --> 00:18:02,819
+nightmare. So I like Austin a lot better now.
+
+153
+00:18:05,220 --> 00:18:09,140
+Okay. So I just wanted to know if you were like familiar with all the account types.
+
+154
+00:18:10,019 --> 00:18:14,900
+So you put this on the Roth IRA accounts, the 401Ks and their accounts, bank accounts,
+
+155
+00:18:14,900 --> 00:18:15,220
+basically.
+
+156
+00:18:16,019 --> 00:18:20,180
+So we put the last four of the account number where it says account number, we put the last four.
+
+157
+00:18:21,140 --> 00:18:27,140
+We put the type of account, we put the balance. And then I actually usually take the date off
+
+158
+00:18:27,140 --> 00:18:31,460
+because I think it looks messy, but we can leave the date if Andrew wants that.
+
+159
+00:18:31,460 --> 00:18:34,180
+And then the cash balance in that little bubble at the bottom.
+
+160
+00:18:34,180 --> 00:18:35,859
+Now the balance includes.
+
+161
+00:18:35,859 --> 00:18:39,539
+They're all the same date. We just moved that to a top right thing for
+
+162
+00:18:39,539 --> 00:18:42,339
+balance as of this date, or I guess some dates are different dates, I guess.
+
+163
+00:18:42,339 --> 00:18:46,740
+Well, and we have the date at the top left. So really, I take it off and he's never
+
+164
+00:18:46,740 --> 00:18:49,859
+complained. So I'm not, I don't care if that's on there or not.
+
+165
+00:18:50,849 --> 00:18:59,970
+But the balance, like, for example, on this Roth IRA in the top left, 11,162.47, that includes
+
+166
+00:18:59,970 --> 00:19:05,730
+the 316 cash. So basically the cash balance is there, but it's not, it's already added
+
+167
+00:19:05,730 --> 00:19:07,569
+into the balance. So it's not separate.
+
+168
+00:19:07,569 --> 00:19:11,089
+Yeah, it's your account of that, this investment in cash, right?
+
+169
+00:19:11,089 --> 00:19:14,690
+Yeah, it's telling you what's invested and what you have left in cash to invest.
+
+170
+00:19:15,650 --> 00:19:24,450
+Okay. So these accounts up here on the top half are retirement accounts. So it can only be
+
+171
+00:19:24,450 --> 00:19:30,930
+401ks, pensions, Roth IRAs, regular IRAs. That's all that can be up there.
+
+172
+00:19:31,809 --> 00:19:36,529
+And so for this quadrant on the upper left, for example, we have the IRA and the Roth IRA.
+
+173
+00:19:37,089 --> 00:19:40,769
+So this gray box at the top that says client one retirement only,
+
+174
+00:19:41,410 --> 00:19:44,049
+that is the total of these two accounts for the client.
+
+175
+00:19:44,829 --> 00:19:45,630
+Understood.
+
+176
+00:19:45,630 --> 00:19:50,990
+Go over to the other side, same thing. This one has three. So this gray box for client
+
+177
+00:19:50,990 --> 00:19:58,529
+to retirement only is these three numbers totaled. Then we go down and kind of in the center,
+
+178
+00:19:58,529 --> 00:20:06,049
+we have the trust. And usually the trust is funded by putting the client's house into the
+
+179
+00:20:06,049 --> 00:20:11,809
+trust. So this number is actually updated every meeting. We go look up the value of their house
+
+180
+00:20:11,809 --> 00:20:17,730
+from Zillow, which I know it's not accurate, but it's a good measure of if the market's going up
+
+181
+00:20:17,730 --> 00:20:24,450
+or down. Yeah. The exact dollar amount doesn't really matter in terms of the zestimate, right?
+
+182
+00:20:24,450 --> 00:20:25,410
+You pull the zestimate.
+
+183
+00:20:25,410 --> 00:20:30,930
+Yes. We go to Zillow, we type in their address and it just pops up the zestimate. So that's
+
+184
+00:20:30,930 --> 00:20:34,529
+actually where that number comes from. Super scientific, I know.
+
+185
+00:20:36,690 --> 00:20:40,769
+If you want to make zestimate minus 5%, then it's best to be profitable.
+
+186
+00:20:40,769 --> 00:20:46,289
+Exactly. It goes up and down, but we always know, has the market gone up since your last
+
+187
+00:20:46,289 --> 00:20:50,609
+appointment or has the market gone down? It would be different if a realtor came and assessed.
+
+188
+00:20:50,609 --> 00:20:55,650
+Yeah, they're giving me a snapshot of my net worth. Honestly, every account goes up and down.
+
+189
+00:20:55,650 --> 00:20:59,089
+Every trading account goes up and down pretty rapidly too, probably more than your house,
+
+190
+00:20:59,089 --> 00:21:01,170
+to be honest with you, every month.
+
+191
+00:21:01,170 --> 00:21:05,410
+Oh, for sure. I mean, sometimes in a day we see our clients' accounts go up or down
+
+192
+00:21:05,410 --> 00:21:06,369
+like $100,000.
+
+193
+00:21:06,369 --> 00:21:10,849
+Actually, 2026, right? Yeah, don't get me sorry about that. It's crazy out there.
+
+194
+00:21:11,650 --> 00:21:16,450
+Cool. And so there's two kinds of accounts. Sorry, I just want to make sure I understand.
+
+195
+00:21:16,450 --> 00:21:20,529
+There's two kinds of accounts essentially. There's bank accounts, which are cash essentially,
+
+196
+00:21:20,529 --> 00:21:24,049
+and there's various kinds of bank accounts, right? There's retirement bank accounts,
+
+197
+00:21:24,049 --> 00:21:26,529
+and there's savings accounts, and checking accounts, all that good stuff.
+
+198
+00:21:27,089 --> 00:21:30,930
+And then there's joint accounts, all that stuff too. We haven't talked about joint
+
+199
+00:21:30,930 --> 00:21:34,289
+accounts in here. I always see it separate out with client one, client two. How do you
+
+200
+00:21:34,289 --> 00:21:38,130
+represent joint accounts would be a question I have, if that exists at all? Or is it always
+
+201
+00:21:38,130 --> 00:21:43,089
+the same? And then these are all the bubbles available. We decide what bubbles they actually
+
+202
+00:21:43,089 --> 00:21:46,210
+have, what kind of accounts they have. We drop those in. That would be an option.
+
+203
+00:21:46,849 --> 00:21:49,170
+Let's start there. Let's talk about that. Are there any?
+
+204
+00:21:50,130 --> 00:21:56,430
+Yes. So we personalize this for every client. We make however many bubbles we need.
+
+205
+00:21:57,309 --> 00:22:05,150
+So on the bottom, where it says non-retirement, on the right here, we... Okay. Also, I should say,
+
+206
+00:22:05,150 --> 00:22:11,549
+in most of our client situations, there is a high earning spouse and a low or no earning spouse.
+
+207
+00:22:12,430 --> 00:22:19,950
+So it's very easy to just put the overflow into that. But usually, their bank accounts are on
+
+208
+00:22:19,950 --> 00:22:25,230
+the bottom right. These are joint accounts. These are the accounts that are on the SACS,
+
+209
+00:22:25,230 --> 00:22:30,190
+the inflow, the outflow, and the private reserve. So those are still there. Now,
+
+210
+00:22:30,190 --> 00:22:33,710
+if there's no space on that side, we would move them to the other side. It doesn't matter on the
+
+211
+00:22:33,710 --> 00:22:41,150
+bottom. Most of these are joint accounts. I was telling Marianne earlier, for example,
+
+212
+00:22:41,150 --> 00:22:47,309
+if I had a Schwab brokerage account, I could have that with my husband and we both can contribute.
+
+213
+00:22:47,309 --> 00:22:52,750
+But the retirement accounts, like you probably have for your job, it's only for you. It's
+
+214
+00:22:52,750 --> 00:22:58,509
+not for a spouse. So the ones on the bottom can be mixed. The ones on the top cannot be mixed.
+
+215
+00:22:59,230 --> 00:23:03,710
+Right. And I could have non-retirement accounts that are solo too, though, right?
+
+216
+00:23:03,710 --> 00:23:09,309
+Yes. And we put those on here. And if the client does have it, we put it on their side.
+
+217
+00:23:10,269 --> 00:23:13,230
+Just put on their side in non-retirement, basically, right?
+
+218
+00:23:13,230 --> 00:23:20,029
+Yeah. For example, we have one client who gets stock options. And so on her side,
+
+219
+00:23:20,670 --> 00:23:25,789
+she's got a little E-Trade account that her husband doesn't have. But it doesn't matter, really.
+
+220
+00:23:25,789 --> 00:23:31,390
+But it's not retirement, really. It's options. Cool. Sounds good. And then new value of options,
+
+221
+00:23:31,390 --> 00:23:36,670
+too. I'm curious about that. Is that public stock options? Where do you bring a number
+
+222
+00:23:36,670 --> 00:23:39,549
+in for the value of the... I guess it's a public company. It's not a public company.
+
+223
+00:23:39,549 --> 00:23:44,109
+Oh, we only update that once a year when she gets her...
+
+224
+00:23:44,109 --> 00:23:46,269
+A valuation, a 4 or 9A valuation.
+
+225
+00:23:46,269 --> 00:23:49,549
+Yeah. So just one time a year. And then the rest of the year, it'll have this little red
+
+226
+00:23:50,509 --> 00:23:52,430
+asterisk that says it's not up to date.
+
+227
+00:23:53,519 --> 00:23:56,480
+Well, I'm learning. I'm not working my accountant hard enough is what I'm learning
+
+228
+00:23:56,480 --> 00:24:00,160
+in this course. I have one more of these myself. That'd be great.
+
+229
+00:24:02,240 --> 00:24:03,119
+We can help you with that.
+
+230
+00:24:03,680 --> 00:24:11,119
+Okay. So yeah, any non-retirement accounts, any other investments that are not retirement,
+
+231
+00:24:11,119 --> 00:24:17,839
+anything else is added there on the bottom. And then when we go to add,
+
+232
+00:24:19,019 --> 00:24:24,460
+we go to add these up, we do not add the trust in. Okay. So the non-retirement total right here,
+
+233
+00:24:24,460 --> 00:24:28,460
+the gray bottom. This is only the accounts, not the trust.
+
+234
+00:24:29,099 --> 00:24:30,960
+Gotcha. Okay.
+
+235
+00:24:32,140 --> 00:24:39,259
+Then we'll go to liabilities. So liabilities are any debts that they have, car loans, mortgage,
+
+236
+00:24:40,299 --> 00:24:43,740
+usually nobody, none of our clients have other debts other than those.
+
+237
+00:24:44,460 --> 00:24:48,059
+So we like to have, and this one's missing the interest rate.
+
+238
+00:24:48,059 --> 00:24:55,099
+We do like to have what it is. So like mortgage, whatever, mortgage, auto, we like to have the
+
+239
+00:24:55,099 --> 00:25:03,630
+interest rate in a column in the middle between these, we have the balance. And then with all
+
+240
+00:25:03,630 --> 00:25:08,910
+the different liabilities that we have, we total the liabilities up here at the top in that light
+
+241
+00:25:08,910 --> 00:25:16,460
+gray box. Oh, here. Oh yeah. Sorry. I'm like doing it with my mouse, but you're doing it with yours.
+
+242
+00:25:17,180 --> 00:25:22,299
+Okay. Nice liabilities on top is this little box is just the total of anything on the bottom.
+
+243
+00:25:22,299 --> 00:25:27,579
+So sometimes there's nothing, sometimes it's one thing, it depends, but we total the liabilities.
+
+244
+00:25:28,460 --> 00:25:34,619
+Then may I add all of that math is done manually. So even just automating that
+
+245
+00:25:35,680 --> 00:25:40,559
+would be great. Yeah, because there's errors and we have to keep double checking and things like that.
+
+246
+00:25:40,559 --> 00:25:48,559
+So now we have done all of the work on this chart. So we take these, we take all the gray boxes. So we
+
+247
+00:25:48,559 --> 00:25:54,240
+take the client one retirement, we take the client two retirement, the non-retirement total,
+
+248
+00:25:55,259 --> 00:26:01,519
+and the trust. This is where the trust comes in. So we add the three boxes plus the trust,
+
+249
+00:26:02,240 --> 00:26:08,559
+and that is the grand total of their net worth. So your time in one retirement to total retirement,
+
+250
+00:26:08,559 --> 00:26:13,279
+a non-retirement, and then trust is grand total. Those four numbers go into that and then you might,
+
+251
+00:26:13,279 --> 00:26:20,799
+and the liabilities are underneath that. The liabilities are separate. We do not subtract
+
+252
+00:26:20,799 --> 00:26:26,079
+liabilities from their net worth. They're just a separate box. So their net worth is client one
+
+253
+00:26:26,079 --> 00:26:32,430
+retirement, client two retirement, non-retirement, trust, and then liabilities are separate underneath.
+
+254
+00:26:32,430 --> 00:26:38,190
+So that's how we come to all the numbers. Cool. Amazing. And we detailed that for you in a
+
+255
+00:26:38,190 --> 00:26:44,960
+document so you can go back to it. Yeah. Okay, let's talk about where we get the numbers. Yes,
+
+256
+00:26:44,960 --> 00:26:52,240
+yes, yes, that's exactly right. Okay. So this part is also tricky. Oh, we didn't show him the
+
+257
+00:26:52,240 --> 00:26:58,079
+monthly expense. That's the only one we were missing, just so he knows from this for the SACS.
+
+258
+00:26:59,309 --> 00:27:10,109
+So for SACS, the information we pull from here are agreed on amounts from their monthly expense
+
+259
+00:27:10,109 --> 00:27:15,470
+worksheet, which looks like this. They fill it out. You mean the outflow, right? The expenses
+
+260
+00:27:15,470 --> 00:27:20,430
+outflow and that. Yes, yes, expenses outflow. Exactly. Like the stuff that's going into
+
+261
+00:27:20,990 --> 00:27:26,190
+like the non-private reserve stuff. What they earn, how much they need, what's going to be
+
+262
+00:27:26,190 --> 00:27:32,029
+transferred, what goes to the private reserve. Understood. That makes a lot of sense.
+
+263
+00:27:32,829 --> 00:27:37,470
+Perfect. So we'll go through that. But when you say monthly agreed upon amount, that's like
+
+264
+00:27:37,470 --> 00:27:42,029
+that, the guy that's been moving, you have them fill out a sheet of expenses sheet when their
+
+265
+00:27:42,029 --> 00:27:46,910
+intake, when they're getting onboarded, I assume. Yeah. And then you just transfer what
+
+266
+00:27:46,910 --> 00:27:53,630
+the expenses are to the red account. Yeah. So let's say their regular monthly bills were like
+
+267
+00:27:53,630 --> 00:28:00,589
+$15,000. We would round up and they probably would be transferring like $18,000 every month
+
+268
+00:28:00,589 --> 00:28:05,470
+to the outflow. So there's a buffer. So their inflow is like 40 grand and everything remainder
+
+269
+00:28:05,470 --> 00:28:10,589
+goes down to like the private reserve and then gets divided up based on whatever you have.
+
+270
+00:28:10,589 --> 00:28:14,910
+We want them to live in like a mental state of abundance. So they're never like,
+
+271
+00:28:14,910 --> 00:28:17,869
+oh my gosh, do I have enough money in my account to go out to dinner?
+
+272
+00:28:19,869 --> 00:28:25,789
+So that's why we round it up. And then just periodically when they do, like we call it
+
+273
+00:28:25,789 --> 00:28:29,950
+an audit at the end of the month, it takes like 15 minutes. They just account for what they
+
+274
+00:28:29,950 --> 00:28:36,029
+spent and the actual numbers. Then they can transfer any excess they did not spend out into
+
+275
+00:28:36,029 --> 00:28:40,980
+the private reserve as well. Do you send them the sheet in advance or after the fact? Is it
+
+276
+00:28:40,980 --> 00:28:46,559
+the end of the month or the start of the month? They do the audit at the end of the month and we
+
+277
+00:28:46,559 --> 00:28:52,000
+actually never see the audit. That's just something they do on their own. What I mean to say is that
+
+278
+00:28:52,000 --> 00:28:56,640
+they get the expenses sheet after the audit is done and they move that amount into the private
+
+279
+00:28:56,640 --> 00:29:02,480
+reserve. So we give them the monthly expensive sheet when they first start and then we just
+
+280
+00:29:02,480 --> 00:29:09,680
+adjust as necessary. So if we're in the quarterly update, that goes out at the end
+
+281
+00:29:09,680 --> 00:29:13,759
+of the quarter before. And so basically what I mean to say is the stuff that they do to like,
+
+282
+00:29:13,759 --> 00:29:17,279
+you know, they fill out their sheet. They go like, guys, they have three grand on my expenses.
+
+283
+00:29:18,079 --> 00:29:22,640
+I can move that into private reserve. That's after the sheet has gone out, right? Like that's,
+
+284
+00:29:23,440 --> 00:29:31,200
+does that make sense? Yes, it makes sense. I understand now. No. So we prepare this,
+
+285
+00:29:32,079 --> 00:29:38,160
+but we have access to their bank balance. Right. So we just update it without ever
+
+286
+00:29:38,160 --> 00:29:42,960
+talking about it unless they need to talk about it. Because if they're like under budget and
+
+287
+00:29:42,960 --> 00:29:47,200
+transferring excess, we don't really talk about it. If they're overspending and they keep
+
+288
+00:29:47,200 --> 00:29:52,240
+transferring excess into their outflow, then we talk about it and revisit it. But otherwise,
+
+289
+00:29:53,650 --> 00:29:58,369
+once they get it set, they're, they're all kind of just, they're just normal people. Like they
+
+290
+00:29:58,369 --> 00:30:06,029
+don't spend excessively usually. Um, so we don't revisit it often, if that makes sense.
+
+291
+00:30:06,829 --> 00:30:11,309
+Very nice. We show them. Yeah. And this is a snapshot of a moment in time, basically. Right.
+
+292
+00:30:11,309 --> 00:30:15,869
+So like, if you generate the report today, it's, I think that's the case before. Yeah.
+
+293
+00:30:15,869 --> 00:30:19,710
+Right. Um, I'd love to understand where the data is coming from.
+
+294
+00:30:20,640 --> 00:30:29,309
+Okay. Okay. We're back. So we can start with Saks. Is that okay? Or would you like me to
+
+295
+00:30:29,309 --> 00:30:33,789
+zoom in? No, no, start here. This is great. I'd love to see like, especially the site. Yeah.
+
+296
+00:30:33,869 --> 00:30:39,789
+Perfect. Um, so all credit to Rebecca, because she was the one that helped me put this together.
+
+297
+00:30:39,789 --> 00:30:47,950
+But the inflow, like we said, we pull a client salary and we gather this info from our,
+
+298
+00:30:48,589 --> 00:30:53,700
+when we onboard them, if it changes, where do you find this? Sorry, I'm cutting off.
+
+299
+00:30:54,740 --> 00:30:57,940
+Let's say I'm preparing a report like six months after onboarding has ended and you have a new
+
+300
+00:30:57,940 --> 00:31:02,960
+person coming in, where would they find what the agreed upon inflow was essentially?
+
+301
+00:31:04,190 --> 00:31:08,589
+Is there like a record? Is there like a record somewhere of customers, like a CRM,
+
+302
+00:31:08,589 --> 00:31:14,910
+like a, like an air table or something? It's on that. It's on that Excel spreadsheet. Yeah.
+
+303
+00:31:14,910 --> 00:31:19,390
+I see. Okay. That budgeting spreadsheet that they fill out and we help them round up. We
+
+304
+00:31:19,390 --> 00:31:23,710
+just have a copy of that. And it's actually an Excel sheet, not a Google sheet, not in the,
+
+305
+00:31:23,710 --> 00:31:27,470
+I'm trying to figure out, can I read this? Like, can, can my, can my, can the AI agent
+
+306
+00:31:27,470 --> 00:31:31,869
+we build for you guys just go read that automatically and save you the step of
+
+307
+00:31:31,869 --> 00:31:36,109
+entering? Like, you know, does that make sense? Well, we can submit the monthly,
+
+308
+00:31:39,279 --> 00:31:44,240
+the Excel spreadsheet. We don't have this recorded somewhere internally in a system that, hey,
+
+309
+00:31:44,240 --> 00:31:50,880
+client one and client two. Nope, not yet. Okay. Oh yeah. Yeah. Not yet.
+
+310
+00:31:52,049 --> 00:31:57,569
+We're a very small operation. There's three of us. Yeah. That's why you need more agents.
+
+311
+00:31:57,569 --> 00:32:03,250
+So we're happy to be helping you guys. We can help customers without adding too many more
+
+312
+00:32:03,250 --> 00:32:06,769
+people. I'm curious, like how many time, how many customers have you guys got that you're
+
+313
+00:32:06,769 --> 00:32:16,500
+sending this out for? So our fees are, our fees are very high and we don't need that many clients.
+
+314
+00:32:17,299 --> 00:32:23,299
+If that makes sense, we have about six, like regular, they pay us monthly. And then we have
+
+315
+00:32:25,539 --> 00:32:32,609
+assets under management, you know, all assets, all, all retirement investment plans charge a fee.
+
+316
+00:32:32,609 --> 00:32:40,190
+And so we have, we have income from that as well. So it's important. Like, I mean, we're not doing
+
+317
+00:32:40,190 --> 00:32:45,230
+this process so many times every month that you can really put eyeballs on it, basically. And like,
+
+318
+00:32:45,230 --> 00:32:50,990
+really like get it right, essentially, right? Like that's what we can, but you know, Marianne
+
+319
+00:32:51,630 --> 00:32:59,390
+is like a wonderful, wonderful assistant. But before her, we went through three in
+
+320
+00:33:00,420 --> 00:33:05,220
+like the first five months that I worked here. And then we didn't have an assistant
+
+321
+00:33:05,220 --> 00:33:12,660
+for three months before we got her. So it was like, I was doing my job and her job. And
+
+322
+00:33:13,460 --> 00:33:18,579
+and then for that with the other assistants, it was just like mistake after mistake after mistake.
+
+323
+00:33:18,579 --> 00:33:24,619
+And you know, so Marianne's doing great, but it would be nice for everybody to automate it
+
+324
+00:33:24,700 --> 00:33:32,859
+and have a more. Yeah, yeah. If we can take this takes us a day to prepare, if we could take this
+
+325
+00:33:32,859 --> 00:33:40,660
+down to an hour, where we don't have to manually do the math where some of these might not be AI.
+
+326
+00:33:41,980 --> 00:33:53,950
+I worked temporarily for a like Google advertising company. And they had the reports that they
+
+327
+00:33:53,950 --> 00:34:02,910
+shared with the clients on a monthly basis. And I think it was done through Google data,
+
+328
+00:34:02,910 --> 00:34:10,829
+something like that. It was a Google software. And basically, we had a studio. Sorry,
+
+329
+00:34:11,730 --> 00:34:17,329
+Data Studio, Google Data Studio, Data Studio. Yes. Something like that would be great. I mean,
+
+330
+00:34:17,329 --> 00:34:21,730
+there are some things that are not going to be updated automatically. And that we know that have
+
+331
+00:34:21,730 --> 00:34:33,840
+to be input manually. That's okay. But if the format, it lives in a place where it doesn't get
+
+332
+00:34:33,840 --> 00:34:41,360
+messed up if we input. It's just like a preset format. That would be great. If it does the math
+
+333
+00:34:41,360 --> 00:34:47,760
+for us, that would be fantastic. And then the things that we can automate, then that would
+
+334
+00:34:47,760 --> 00:34:55,360
+be of a great plus, too. Yeah. Well, and I just want to say for compliance, we cannot use anything
+
+335
+00:34:55,360 --> 00:35:04,480
+Google will have to be something secure. Even AI is actually really tricky because
+
+336
+00:35:06,380 --> 00:35:10,460
+I can speak to that. And let's hold that thought till the end of this call, because I fully
+
+337
+00:35:10,460 --> 00:35:16,860
+understand. But then at the same time, there's the way we use AI stores, nothing for training,
+
+338
+00:35:16,860 --> 00:35:21,099
+to use like regular commercial AI, everything you put in there is then used for training the next
+
+339
+00:35:21,099 --> 00:35:30,059
+version. But we don't do that. And so that's great. But yeah, I'm imagining a role where we build you
+
+340
+00:35:30,059 --> 00:35:33,659
+I'm sorry, I'm painting a picture, but I tried to stay up solutions. But I want to make sure we get
+
+341
+00:35:33,659 --> 00:35:39,900
+this just right for you guys. And so we dial it in. I'm imagining a world where we build you a
+
+342
+00:35:39,900 --> 00:35:45,739
+simple portal, right? Where you're able to set up a new customer. And like you have six at the
+
+343
+00:35:45,739 --> 00:35:49,579
+moment, that might be 12 next year, right? And we want to be able to get you there without adding
+
+344
+00:35:49,579 --> 00:35:54,219
+more employees. And that's the beauty of AI and agents especially. So you set up a customer, you
+
+345
+00:35:54,219 --> 00:35:57,099
+fill up a few fields, and these are fields that don't change very often, your inflow, your
+
+346
+00:35:57,099 --> 00:36:02,380
+outflow, your inflow, your outflow, you know, stuff that's static, not bad. And maybe you
+
+347
+00:36:02,380 --> 00:36:06,780
+add like, Hey, here's all the accounts associated with them. And when I say add accounts, I mean,
+
+348
+00:36:06,780 --> 00:36:10,699
+just give me the last four digits or whatever, right? Or like, Hey, Wells Fargo account number.
+
+349
+00:36:11,260 --> 00:36:14,860
+And if you have like any keys, I'm not saying passwords, keys that allow us to log in
+
+350
+00:36:14,860 --> 00:36:20,829
+automatically. What we can then do is we can every month, or when you hit a button saying
+
+351
+00:36:20,829 --> 00:36:26,780
+generate new reports, it would go pick up your customer list, you know, figure out the
+
+352
+00:36:26,780 --> 00:36:30,940
+stuff that's static is easy pulls that out of that of that CRM that we built a very simple,
+
+353
+00:36:30,940 --> 00:36:34,460
+like, this will be an Excel spreadsheet, it won't look anything complicated with like a bunch
+
+354
+00:36:34,460 --> 00:36:38,619
+of columns, pulls that out, pulls out details about the bank accounts that we need to pull
+
+355
+00:36:38,619 --> 00:36:42,380
+information from, right? Because everyone has a different number of accounts. And I imagine
+
+356
+00:36:42,380 --> 00:36:46,619
+there'll be like types there, they'll be like, this is a checking account, checking or savings,
+
+357
+00:36:46,619 --> 00:36:50,940
+this is an investment account. So then we know, hey, this guy can have like an investment account
+
+358
+00:36:50,940 --> 00:36:55,099
+amount, and we got to pull the cash amount too, versus this guy's just cash, right? And this
+
+359
+00:36:55,099 --> 00:36:59,019
+other guy is like something else entirely. So we could have, I see people who have accounts,
+
+360
+00:36:59,019 --> 00:37:03,019
+I see bank accounts, and I see investment accounts, right? And that's basically the
+
+361
+00:37:03,019 --> 00:37:07,579
+two types we have, the third I'd love to know, pulls that information and automatically,
+
+362
+00:37:07,579 --> 00:37:11,739
+right? So that stuff is automated as much as possible, when it can, sometimes it won't be
+
+363
+00:37:11,820 --> 00:37:14,699
+able to pull it automatically. So like, sometimes, like, for when you have like the,
+
+364
+00:37:15,820 --> 00:37:19,500
+the investment accounts, the shop accounts, right? And so it won't pull it automatically.
+
+365
+00:37:19,500 --> 00:37:21,739
+But then that's a decision you guys make, right? Like, if you see us,
+
+366
+00:37:22,300 --> 00:37:26,300
+in version one of this is able to handle basic accounting information and pulling in
+
+367
+00:37:26,300 --> 00:37:30,780
+automatically, then version two, our next edit on this could be, hey, pull that into
+
+368
+00:37:30,780 --> 00:37:35,900
+automatically, right? And that we can do in a very secure way, using your credentials,
+
+369
+00:37:35,900 --> 00:37:39,980
+Rebecca, without giving access to anybody else, right? Only the agent have access with you. And
+
+370
+00:37:39,980 --> 00:37:45,500
+that's better, more trust, it's easier to trust than like, and that can be read only access to.
+
+371
+00:37:45,500 --> 00:37:48,059
+So that doesn't have to be right access to those accounts. And then we can set them up
+
+372
+00:37:48,059 --> 00:37:52,219
+in the tokens correctly, too. So we can go next step and pull all of them, but it'll try to pull
+
+373
+00:37:52,219 --> 00:37:58,219
+as much information as it can, in the account sheet, right? The next other sheet you showed me,
+
+374
+00:37:58,780 --> 00:38:05,389
+and create like, draft one of this sheet, but not quite yet fully, it will say, hey,
+
+375
+00:38:05,389 --> 00:38:11,309
+I don't have these four things, or these six things. And so can you pull those in manually?
+
+376
+00:38:11,309 --> 00:38:16,590
+And then once you pull those, put those amounts in, click generate, it will create a PDF for you.
+
+377
+00:38:17,309 --> 00:38:21,230
+Maybe it creates it for you in Canva as well. So you can also move bubbles around,
+
+378
+00:38:21,230 --> 00:38:26,989
+you need to make some edits, right? Like with PDF. That sounds great.
+
+379
+00:38:28,179 --> 00:38:33,539
+So I'm just thinking in right capital, which is where we get a lot of our information from
+
+380
+00:38:34,500 --> 00:38:40,820
+the other one, the one with all the little circles. Right, capital is really tricky because
+
+381
+00:38:41,699 --> 00:38:48,619
+it's not always up to date. So when I look on to write capital, we have to go refresh,
+
+382
+00:38:49,500 --> 00:38:58,449
+like let it re-sync all the client's accounts. And then sometimes, most of the time, there are
+
+383
+00:38:58,449 --> 00:39:02,929
+still several accounts that aren't linked. And so then I have to look at that exact account,
+
+384
+00:39:02,929 --> 00:39:08,130
+and I'm like, where is this account located? How do I get an updated number? So sometimes
+
+385
+00:39:08,130 --> 00:39:12,929
+I'll have to go ask the client for a statement. Sometimes I'll have to log into a separate website
+
+386
+00:39:13,489 --> 00:39:22,530
+if I have access to whatever. What it can do is it will first try to like fiddle around with
+
+387
+00:39:22,530 --> 00:39:26,849
+write capital's API to make sure it's updating that information. Sometimes you can, I haven't
+
+388
+00:39:26,849 --> 00:39:30,530
+looked at the API too deeply, but you have to push it to update, and then it updates,
+
+389
+00:39:31,489 --> 00:39:35,250
+and then you can pull that in. But it will still have certain fields that are missing.
+
+390
+00:39:35,250 --> 00:39:40,289
+I'll flag those. And you can't generate a full report till it does that. It could create a drop
+
+391
+00:39:40,289 --> 00:39:44,610
+for you if you really want to see it. But what it'll ask you is, hey, I bought these six numbers,
+
+392
+00:39:44,610 --> 00:39:50,130
+I need these four. For these accounts that are set up in the CRM, you still need to find me
+
+393
+00:39:50,130 --> 00:39:56,130
+numbers. So maybe we could manually override also and just say like, use the old number.
+
+394
+00:39:56,130 --> 00:40:00,449
+Because write capital will have numbers from like six months ago or a year ago or whatever.
+
+395
+00:40:01,010 --> 00:40:04,289
+You could give it some obviously good one, like use the last number, you can have a little button
+
+396
+00:40:04,289 --> 00:40:07,889
+on it. And then by the way, those buttons are real time. So like you could click that button
+
+397
+00:40:07,889 --> 00:40:12,050
+and see what it pulls in. Or you could say that number looks wrong. I'm going to find this out the
+
+398
+00:40:12,050 --> 00:40:15,409
+other way, right? Manual override where it's put a number and you're like, nah, I want to add
+
+399
+00:40:15,409 --> 00:40:20,369
+this number instead. So like, you still get, Marianne, you still have to like do a review
+
+400
+00:40:20,369 --> 00:40:24,849
+of the draft, right? Yeah. You don't have to build from scratch. And then all the internal
+
+401
+00:40:24,849 --> 00:40:32,210
+rules like this minus this is equal to private reserve and that goes, that's just baked into
+
+402
+00:40:32,210 --> 00:40:35,650
+the, you don't have to think about that, right? Yeah. So you're only focusing on the things
+
+403
+00:40:35,650 --> 00:40:39,570
+that only you can do essentially. The idea of it living in a portal.
+
+404
+00:40:43,860 --> 00:40:50,260
+The idea of it living in a portal work, because right now we use Canva, we use Word, we use the
+
+405
+00:40:50,340 --> 00:40:58,900
+monthly spreadsheet, but it's all, it all lives in different places. And to me, that is very
+
+406
+00:40:58,900 --> 00:41:09,219
+stressful. We can go to one place, one portal where we have this live. And it just, we work
+
+407
+00:41:09,219 --> 00:41:16,820
+on all of like the circle chart and the sacks on the same spot. And it's being stored because
+
+408
+00:41:16,820 --> 00:41:23,860
+also a big portion of it is where is it being stored? Can we have it drop it into their Dropbox
+
+409
+00:41:23,860 --> 00:41:29,699
+automatically linked to Dropbox and it's being stored proactively instead of us having to
+
+410
+00:41:30,260 --> 00:41:37,139
+look around for files all the time. That just, that portion alone sounds great,
+
+411
+00:41:37,139 --> 00:41:42,179
+having everything in one spot, being able to work on both of them in one same spot, same format.
+
+412
+00:41:42,900 --> 00:41:55,619
+And then even if we can add like this, just like a little SOP that we can refer to directly on that
+
+413
+00:41:55,619 --> 00:42:01,380
+portal, that would be fantastic. If anyone else would be super helpful. What about the monthly
+
+414
+00:42:01,380 --> 00:42:06,980
+expense worksheet? If we're dreaming big here, couldn't that be a piece of the portal where
+
+415
+00:42:07,699 --> 00:42:12,579
+the clients can only access that, but that's a link we can send out rather than an Excel file
+
+416
+00:42:12,579 --> 00:42:16,900
+that we're going to have to update. I think what we should do is, I mean, sorry, sorry. We should
+
+417
+00:42:18,030 --> 00:42:21,710
+pick out one problem and let's take a step back. Here's what I'm very good at.
+
+418
+00:42:23,070 --> 00:42:24,989
+You can't solve everything at once.
+
+419
+00:42:24,989 --> 00:42:28,269
+No, we can. We absolutely can. And I like how John explains it. It's,
+
+420
+00:42:29,710 --> 00:42:35,489
+it's, you know, we're building Lego city, but we've got to find one brick at a time, right?
+
+421
+00:42:35,489 --> 00:42:36,769
+Yeah, I love that.
+
+422
+00:42:36,769 --> 00:42:43,329
+But what I'm loving about this is I think we build you decline portal. And that seems to be
+
+423
+00:42:43,650 --> 00:42:47,329
+like there's a bigger, there's a problem of repetitive doing things repeatedly. But like,
+
+424
+00:42:47,329 --> 00:42:50,610
+I think what you said, Marianne, about like, there's no central place for a client to kick,
+
+425
+00:42:50,610 --> 00:42:55,010
+you don't have to keep things off from or store data, like basic onboarding data.
+
+426
+00:42:56,050 --> 00:42:59,730
+If you can just build you that and then yeah, right now we could just input that manually
+
+427
+00:42:59,730 --> 00:43:04,289
+to the portal one time, because some of these things are one time. And then use this for
+
+428
+00:43:04,289 --> 00:43:08,530
+like solving that generation. Our goal is to build you the portal, but really the goal is to
+
+429
+00:43:08,530 --> 00:43:12,849
+like solve the problem we solve with like generating PDFs of their monthly reports,
+
+430
+00:43:12,849 --> 00:43:13,409
+basically quarter.
+
+431
+00:43:13,409 --> 00:43:16,369
+And I know that that is something that Andrew wants. He wants.
+
+432
+00:43:16,369 --> 00:43:21,090
+But we can bring that same, we can come back to it and say, now, what else can we do of
+
+433
+00:43:21,090 --> 00:43:25,010
+this portal? And oh, we can build you agent number two, and this is your onboarding agent.
+
+434
+00:43:25,010 --> 00:43:29,969
+So you go like, I don't want to enter stuff manually into this guy. Here's an email address,
+
+435
+00:43:29,969 --> 00:43:33,650
+send them our onboarding form and let them fill it out. And it can be really interactive.
+
+436
+00:43:33,650 --> 00:43:38,130
+You can send them reminders automatically. And then ping you guys only when we've
+
+437
+00:43:38,130 --> 00:43:41,250
+sent them like four reminders and they haven't done anything for like a week, right?
+
+438
+00:43:41,250 --> 00:43:45,489
+And then you're like, Hey, you guys should pull it. Yeah, have Andrew call them, right?
+
+439
+00:43:46,050 --> 00:43:51,010
+And so I think that's the beauty of it. Like we can build you like it's like instead of
+
+440
+00:43:51,010 --> 00:43:55,730
+promising you everything on day one, I want to really focus on something that can solve a really
+
+441
+00:43:57,219 --> 00:44:01,059
+big problem or a big enough problem for you guys, because only $500. Also,
+
+442
+00:44:01,059 --> 00:44:05,059
+like we charge you a credit to build this. So it's like, we scope it down to like a very
+
+443
+00:44:05,059 --> 00:44:10,420
+small, narrow problem. And then we can add more to it, right? Agent two, and I'm sure you'll need
+
+444
+00:44:10,420 --> 00:44:15,219
+revisions on this too. You're going to come to me and go like, Hey, can you pull all this information
+
+445
+00:44:15,219 --> 00:44:19,539
+directly instead of having us enter stuff? And that can be like a direction we take it in.
+
+446
+00:44:19,539 --> 00:44:23,699
+Or can you like also do onboarding or can you do both? So it's really important that we show you
+
+447
+00:44:23,699 --> 00:44:26,820
+guys the power of these agents with one very specked out thing. I think I have a really good
+
+448
+00:44:26,820 --> 00:44:30,579
+example here that we can help with. But then it's really good to think about what else can
+
+449
+00:44:30,579 --> 00:44:34,980
+we help with. And I think that comes down the pike, right? Once you guys are really seeing the value
+
+450
+00:44:34,980 --> 00:44:39,139
+and what we built you over here. Yeah. Yeah. We're the only software company is going to be like, Hey,
+
+451
+00:44:39,139 --> 00:44:42,579
+don't buy more software from us. Stick to one thing and then we'll stop there and then we'll go.
+
+452
+00:44:45,139 --> 00:44:49,699
+Okay. Like when you say let's build a client portal, is this a website?
+
+453
+00:44:50,900 --> 00:44:54,420
+Well, yeah, it'll be a web app. Like it'll be an app, you log into it, it'll be like,
+
+454
+00:44:55,300 --> 00:45:00,500
+and you know, we hope and, and we have to pay for hosting for that. Nope. Nope. You don't
+
+455
+00:45:00,500 --> 00:45:06,179
+pay for hosting as good question. So as long as you're a member of Sagan, which is, you know,
+
+456
+00:45:06,179 --> 00:45:11,539
+what we really want you to be the monthly. Yes. We charge you a flat fee to build it.
+
+457
+00:45:12,260 --> 00:45:18,019
+And so after this call, I'm going to like create a spec, right? And send you a spec over email
+
+458
+00:45:18,019 --> 00:45:21,860
+and say, Hey, Rebecca and Marianne, here's what we spoke about. Here's what we're going to
+
+459
+00:45:21,860 --> 00:45:25,539
+build for you. Here's a one-liner and here's like three bullets on what it's going to do,
+
+460
+00:45:25,539 --> 00:45:30,019
+right? Covering the, and then you give it a thumbs up and you say, yeah, build it. We
+
+461
+00:45:30,019 --> 00:45:34,179
+burn one credit from your plan, which is like $500 or you can just pay for it if you want to
+
+462
+00:45:34,179 --> 00:45:38,900
+keep the credit. I think we, we still have like two credits, I think. Yeah. Some folks tend to want
+
+463
+00:45:38,900 --> 00:45:41,699
+to like, Hey, I'm hiring to build this here. So I'll just keep the credits, but I want to
+
+464
+00:45:41,699 --> 00:45:45,380
+burn. Like, uh, I'll just give you guys money. So read your call, but you can do it when I
+
+465
+00:45:45,380 --> 00:45:50,179
+credit and we'll go build it for you. And that's flat. It's one time. It's not like
+
+466
+00:45:50,179 --> 00:45:54,659
+a monthly fee or anything, right? And we'll host the app for you. We'll host the infrastructure. We'll
+
+467
+00:45:54,659 --> 00:45:59,219
+host, we'll even monitor up time, make sure it's still working. You know, it won't have bugs in
+
+468
+00:45:59,219 --> 00:46:03,860
+it and stuff. Um, and you only pay for usage from that point onwards. What that means is we're
+
+469
+00:46:03,860 --> 00:46:07,460
+charging you every time you use it for like the data and the tokens you're using, the AI using
+
+470
+00:46:07,460 --> 00:46:13,139
+inside it, we charge the cost plus 20%. So like it's flat, you know, you're paying tens of
+
+471
+00:46:13,139 --> 00:46:17,619
+dollars a month, not hundreds of dollars a month and you're getting really custom software at
+
+472
+00:46:17,699 --> 00:46:22,420
+scale. So perfect. And that's where the Lego bricks come in, right? We've got to scope it down to
+
+473
+00:46:22,420 --> 00:46:26,659
+something very manageable and then we can launch that and then do more of those essentially. All
+
+474
+00:46:26,659 --> 00:46:32,980
+right. I want to hear about the incoming, like, so we've got, uh, the data that's incoming here.
+
+475
+00:46:32,980 --> 00:46:37,780
+We've got bank accounts and they're coming in through, do you see the right capital? Is that
+
+476
+00:46:37,780 --> 00:46:44,340
+the company? So bank accounts, we usually get through Pinnacle bank and we request that by
+
+477
+00:46:44,420 --> 00:46:50,579
+email a couple of days before the meeting, their personal bankers, their personal bankers for our
+
+478
+00:46:50,579 --> 00:46:55,860
+clients. So you actually ask all your customers to sign up for like Pinnacle bank as a, as a, as a,
+
+479
+00:46:55,860 --> 00:47:01,699
+yes. And we work very closely with the bankers. So at any point we have access to request
+
+480
+00:47:02,340 --> 00:47:07,860
+all of their balances or like their statement history or anything like that. Very cool. Um,
+
+481
+00:47:08,579 --> 00:47:13,619
+does that, is that an email you send out manually? And they send us a secure email
+
+482
+00:47:13,619 --> 00:47:21,500
+that we have to log on. Yeah. Okay. We'll have to, where I see challenges here will be
+
+483
+00:47:22,380 --> 00:47:26,219
+like getting some of this, it'll be easy to fetch, right? And then some of it is going to be a little
+
+484
+00:47:26,219 --> 00:47:30,380
+bit harder to fetch the stuff. That's like one time easy to fetch. You import that one time.
+
+485
+00:47:30,380 --> 00:47:35,739
+It's like we pulled that in, um, all the bank and then Schwab is like, and you mentioned Schwab,
+
+486
+00:47:35,739 --> 00:47:40,059
+which is basically Andrew and Rebecca log in as authorized users and pull that data. And those
+
+487
+00:47:40,139 --> 00:47:45,099
+are the only two kinds of accounts you have, like by account of Pinnacle or right. Capital
+
+488
+00:47:45,099 --> 00:47:50,699
+is an overview of like they could have their liabilities on there. Like their, their car
+
+489
+00:47:50,699 --> 00:47:56,940
+loans, their mortgages, they can link their investment accounts that are outside of Schwab.
+
+490
+00:47:56,940 --> 00:48:01,900
+Schwab are the ones we meet, but they, you know, some have fidelity or Edward Jones or whatever
+
+491
+00:48:01,900 --> 00:48:08,139
+from previous jobs. I imagine right. Capital kind of gives us a little peek, but right
+
+492
+00:48:08,139 --> 00:48:16,219
+capital, that login for sure cannot be shared with any, um, agent because it's not even my
+
+493
+00:48:16,219 --> 00:48:22,780
+login or Andrews. It belongs to somebody Andrew used to work with. Um, and we have access to
+
+494
+00:48:22,780 --> 00:48:30,380
+that program through him, but I don't think it's a big deal if we built the agent to say,
+
+495
+00:48:31,539 --> 00:48:36,260
+enter in the Schwab info, enter in the Pinnacle info, enter in the right capital,
+
+496
+00:48:36,260 --> 00:48:39,780
+and then I'm going to place it in the right thing, the right spot.
+
+497
+00:48:41,489 --> 00:48:46,050
+Because I don't think we can give it access to any of these, any of those three things.
+
+498
+00:48:47,010 --> 00:48:52,130
+I mean, I know that right capital has an API so you might not, I mean, but, but there's
+
+499
+00:48:52,130 --> 00:48:55,010
+two complexities here, right? It's like, Hey, how do you give it access? And then how do you
+
+500
+00:48:55,010 --> 00:48:58,929
+get past the fact that it's not your account, which might be the bigger prayer barrier. Um,
+
+501
+00:48:59,730 --> 00:49:05,489
+I would say not to trust right capital that much just because their own API, like how they
+
+502
+00:49:05,489 --> 00:49:13,070
+connect the other accounts is not perfect. Um, like we've seen it struggle a lot and it's not
+
+503
+00:49:13,070 --> 00:49:20,269
+synced. Um, they have like delays and information, or there are some accounts that cannot be plugged
+
+504
+00:49:20,269 --> 00:49:24,989
+in to write capital just because you can make that second version. Yeah. If you make that a second
+
+505
+00:49:24,989 --> 00:49:31,230
+version, we go like, um, yeah, I can see as, I can see us finding ways to minimize that. And maybe
+
+506
+00:49:31,230 --> 00:49:34,190
+we just build you something and move your customers off, right? Capital, if that's all they're
+
+507
+00:49:34,190 --> 00:49:38,190
+hosting in their legacy, because all the connections are coming in through like Plaid,
+
+508
+00:49:38,190 --> 00:49:42,429
+right? Or one of those like third party tools. So they're not building each of these connections
+
+509
+00:49:42,429 --> 00:49:45,389
+and separately, you could just connect you into Plaid and then have you, but then I think that
+
+510
+00:49:45,389 --> 00:49:50,510
+might be the next one or the one after that that we do for you. What is precise FP? I see that
+
+511
+00:49:50,510 --> 00:49:57,869
+you have that mentioned in your original meeting too. Um, we use precise FP. So, uh, they do like
+
+512
+00:49:57,869 --> 00:50:04,699
+their crop client profile there. They have their age of birth, uh, their date of birth. They have,
+
+513
+00:50:05,659 --> 00:50:14,539
+um, a listed family, for example. Um, it's just, we send them a questionnaire through precise FP
+
+514
+00:50:14,539 --> 00:50:20,380
+that they fill out during like different stages of the onboarding. So the advisors that they work
+
+515
+00:50:20,380 --> 00:50:28,849
+with are also there. Um, it's just, I would say the closest thing we have to a CRM where
+
+516
+00:50:28,849 --> 00:50:35,650
+all of the data for each client is stored in. Interesting. Okay. But we don't, since we have
+
+517
+00:50:35,650 --> 00:50:39,329
+six customers, I feel like clients, we should probably upload them in one time directly. We
+
+518
+00:50:39,329 --> 00:50:43,329
+don't have to like build like a, like a hook into, do you see any reason to build a hook into
+
+519
+00:50:43,329 --> 00:50:49,809
+precise FP? No, no, no, no, no, no. I think we can manually input the information one by one.
+
+520
+00:50:49,809 --> 00:50:54,769
+Okay. I think I have a good sense and feel for version one. I'll just like say it back to you
+
+521
+00:50:54,769 --> 00:51:00,130
+guys. And then you can like, um, tell me if I have a good sense of it. I think we need to build you
+
+522
+00:51:00,130 --> 00:51:05,469
+guys. Uh, okay. There was a key constraint you had laid out in the previous build, which was like
+
+523
+00:51:05,469 --> 00:51:10,110
+zero manual data entry, which Andrew and Zach, Andrew and John and Zach had talked about.
+
+524
+00:51:10,110 --> 00:51:13,550
+I think we get to that constraint because like there's going to be some data entry over here
+
+525
+00:51:13,550 --> 00:51:17,070
+and I have a good sense and it's always good to talk to the folks that actually do the work
+
+526
+00:51:17,710 --> 00:51:24,030
+and that's the big one. And so I think everything else we talked about works makes sense. We're
+
+527
+00:51:24,030 --> 00:51:28,510
+going to build you a system where you can insert clients, right? One time like that can come up
+
+528
+00:51:28,510 --> 00:51:32,829
+precise FP, or you can just add them in manually. It doesn't matter. Um, that's your intake
+
+529
+00:51:32,829 --> 00:51:36,989
+information, including accounts that they link, all the accounts that they have, right? So you'll
+
+530
+00:51:36,989 --> 00:51:42,110
+be able to add link, like just the information that we need to create the PDF. And then we're
+
+531
+00:51:42,190 --> 00:51:46,750
+going to give you the ability to click, like create a new report, right? And that report,
+
+532
+00:51:46,750 --> 00:51:50,269
+since it doesn't have to be like, you can just click a button for it to generate a new report.
+
+533
+00:51:51,389 --> 00:51:56,989
+Try to pull in as much information as it can, right? Now it'll pull in stuff from onboarding.
+
+534
+00:51:57,739 --> 00:52:02,619
+It'll pull in stuff from, um, like whatever it has access to, but it doesn't have access to
+
+535
+00:52:02,619 --> 00:52:08,460
+any live data on like reporting on numbers. So, but it can, and correct me if I'm wrong,
+
+536
+00:52:08,460 --> 00:52:12,219
+right? Like if I, because the background details are coming from, right,
+
+537
+00:52:12,219 --> 00:52:15,739
+which we can't trust and don't have access to directly. And then there's like,
+
+538
+00:52:15,739 --> 00:52:18,940
+so what we need to do is consolidate all the stuff that needs to go into it
+
+539
+00:52:18,940 --> 00:52:22,219
+and give you a little checklist. So it goes like, Hey, enter everything in here,
+
+540
+00:52:22,860 --> 00:52:29,340
+right? And then once you're done with that, you hit generate and that creates a report
+
+541
+00:52:30,059 --> 00:52:34,059
+with all the rules that you talked about, looks better, lines are aligned. Look, you know,
+
+542
+00:52:34,059 --> 00:52:36,780
+we can make it, we can make it exactly the same, but like make it look a little bit more
+
+543
+00:52:36,780 --> 00:52:41,260
+polished and like, you know, get it to like, I like that, I like that a little revamp.
+
+544
+00:52:41,260 --> 00:52:46,139
+I think we won't change the format at all. We'll just change the user experience and then the user
+
+545
+00:52:46,139 --> 00:52:51,820
+interface. Basically is how we talk about it in software and give a little paint job and boom,
+
+546
+00:52:51,820 --> 00:52:59,099
+ready to go. And then you have that in Canva as a draft so that you can change, make visual
+
+547
+00:52:59,099 --> 00:53:02,699
+changes to it if you need to, or you can download as a PDF right there, both from the same
+
+548
+00:53:02,699 --> 00:53:09,980
+interface. You can export to Canva or download as PDF. You get choices and perfect. Oh, okay.
+
+549
+00:53:09,980 --> 00:53:15,340
+Perfect. Yeah. I think that's good. It won't save the report. You can just download it
+
+550
+00:53:15,340 --> 00:53:20,139
+or you can send it to Canva and Canva will save it for you. Right. So that way you it's, it's,
+
+551
+00:53:20,139 --> 00:53:23,579
+it's more robust. And then we have future directions. We have two future directions
+
+552
+00:53:23,579 --> 00:53:27,420
+we talked about. We can bring that data in automatically and we can talk about that.
+
+553
+00:53:27,420 --> 00:53:30,380
+Like there's, there's definitely ways to like, and then we can like help you with
+
+554
+00:53:30,380 --> 00:53:35,579
+onboarding maybe. Right. Yeah. That could be interesting too. Okay. Other
+
+555
+00:53:35,579 --> 00:53:39,019
+options for us to help as well. So that could be agents two, three, and four. Like
+
+556
+00:53:39,019 --> 00:53:42,940
+I think of agents as like, as you know, people don't think it's employees and they're not
+
+557
+00:53:42,940 --> 00:53:47,179
+really employees. They're like an employee is a collection of agents. Right. And so you do five
+
+558
+00:53:47,179 --> 00:53:52,179
+things. One of those things is an agent or maybe half of that one thing is an agent. So like,
+
+559
+00:53:52,179 --> 00:53:54,820
+start thinking like that and then we can like help you guys. Cause like, this is a great
+
+560
+00:53:54,820 --> 00:53:58,420
+challenge. Like as your lean team and you have high net worth individuals, which means
+
+561
+00:53:58,420 --> 00:54:02,739
+expectations are higher and you want to grow without expanding the team too much. Right. So
+
+562
+00:54:02,739 --> 00:54:08,420
+this is like our sweet spot for sure. Okay. Great. Well, we'll look up, we'll look out for your
+
+563
+00:54:09,539 --> 00:54:15,940
+brief on what you said you would send and then I'll probably connect with Andrew just to walk
+
+564
+00:54:15,940 --> 00:54:22,820
+through everything and what we agreed on and get back to you with next steps probably by the end
+
+565
+00:54:22,820 --> 00:54:29,619
+of the week or give me a, I will send you guys a, by tomorrow I'll send you a bill spec. It'll be
+
+566
+00:54:29,619 --> 00:54:33,539
+like a one-liner. Here's what we're going to build for you and like three or four bullets.
+
+567
+00:54:33,539 --> 00:54:38,420
+And here's what we're going to do specifically. Right. You'll have to just reply back and give
+
+568
+00:54:38,420 --> 00:54:42,019
+me a thumbs up saying, Hey, build it. That's the point where we burn the credit and start
+
+569
+00:54:42,019 --> 00:54:46,099
+a development process for you. And we can show prototype to you within a week after that. So
+
+570
+00:54:46,099 --> 00:54:51,380
+like, yes, please discuss this with Andrew internally and then give us a thumbs up on
+
+571
+00:54:51,380 --> 00:54:55,300
+that email and we'll start to build and we'll send you a prototype very quickly after that.
+
+572
+00:54:55,300 --> 00:55:02,480
+Sounds great. Thank you so much. Thank you so much. Thank you. Very nice to meet you.
+
+573
+00:55:02,480 --> 00:55:05,679
+Good to meet you guys too and hope to work with you guys for a while.
+
+574
+00:55:06,320 --> 00:55:08,559
+If you have any other questions, just email us.
+
+575
+00:55:09,760 --> 00:55:12,880
+Thank you. Cheers. Bye. Bye.
+

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Start your firm · AW Portal{% endblock %}
+{% block body %}
+<div class="center card">
+  <h1>Start your firm workspace</h1>
+  <p class="muted">Create your advisory firm's secure portal in seconds.</p>
+  <form method="post">
+    <div class="field"><label>Firm name</label><input name="firm" required autofocus></div>
+    <div class="field"><label>Your name</label><input name="name" required></div>
+    <div class="field"><label>Email</label><input name="email" type="email" required></div>
+    <div class="field"><label>Password</label><input name="password" type="password" required></div>
+    <div class="field"><label>Brand colour</label><input name="brand_color" type="color" value="#2E5E8C"></div>
+    <button class="btn" type="submit" style="width:100%">Create workspace</button>
+  </form>
+  <p class="muted" style="margin-top:10px">Already have an account? <a href="{{ url_for('auth.login') }}">Sign in</a></p>
+</div>
+{% endblock %}

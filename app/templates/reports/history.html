@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Report history · {{ c.display_name }}{% endblock %}
+{% block body %}
+<div class="section-head">
+  <h1>Report history — {{ c.display_name }}</h1>
+  <a class="btn" href="{{ url_for('reports.new_report', cid=c.id) }}">+ New report</a>
+</div>
+<div class="card">
+  {% if runs %}
+  <table>
+    <thead><tr><th>Period</th><th>Generated</th><th>Grand total</th><th>Downloads</th></tr></thead>
+    <tbody>
+      {% for r in runs %}
+      <tr>
+        <td><strong>{{ r.period }}</strong></td>
+        <td>{{ r.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+        <td>${{ r.computed_values.tcc.grand_total_net_worth if r.computed_values else '—' }}</td>
+        <td>
+          <a class="btn small" href="{{ url_for('reports.sacs_pdf', rid=r.id) }}">SACS</a>
+          <a class="btn small" href="{{ url_for('reports.tcc_pdf', rid=r.id) }}">TCC</a>
+          <a class="btn ghost small" href="{{ url_for('reports.review', rid=r.id) }}">View</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p class="muted">No reports generated yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

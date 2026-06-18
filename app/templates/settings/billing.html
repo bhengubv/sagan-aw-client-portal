@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Usage & billing · AW Portal{% endblock %}
+{% block body %}
+<h1>Usage & billing</h1>
+<p class="muted">Metered usage this period. You are charged at <strong>cost + {{ summary.markup_pct }}%</strong> (spec §16).</p>
+<div class="card">
+  <table>
+    <thead><tr><th>Item</th><th>Quantity</th><th>Base cost</th><th>Billable</th></tr></thead>
+    <tbody>
+      {% for kind, b in summary.by_kind.items() %}
+      <tr><td>{{ kind.replace('_',' ') }}</td><td>{{ b.qty }}</td><td class="muted">${{ b.base }}</td><td>${{ b.billed }}</td></tr>
+      {% else %}<tr><td colspan="4" class="muted">No usage yet.</td></tr>{% endfor %}
+    </tbody>
+    <tbody>
+      <tr><td colspan="2"></td><td><strong>Total base</strong></td><td><strong>${{ summary.base_total }}</strong></td></tr>
+      <tr><td colspan="2"></td><td><strong>Total billable</strong></td><td><strong style="color:var(--brand-dark)">${{ summary.billed_total }}</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

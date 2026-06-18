@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Generate report · {{ c.display_name }}{% endblock %}
+{% block body %}
+{% set sources = sources|default({}) %}
+{% set stale = stale|default([]) %}
+{% set fetch_report = fetch_report|default(none) %}
+<div class="section-head">
+  <h1>Generate report — {{ c.display_name }}</h1>
+  <a class="btn ghost" href="{{ url_for('clients.detail', cid=c.id) }}">Back to profile</a>
+</div>
+
+{% if fetch_report and fetch_report.fetched %}
+  <div class="flash ok">Auto-filled <strong>{{ fetch_report.fetched }}</strong> field(s) from connected providers ({{ sources.values()|unique|join(', ') }}). Review, override if needed, and fill any blanks.</div>
+{% endif %}
+{% if fetch_report and fetch_report.errors %}
+  <div class="flash warn">Some providers could not be reached — those fields fall back to manual entry: {{ fetch_report.errors|join('; ') }}</div>
+{% endif %}
+
+<div class="card">
+  <h2>Auto-extract from a statement <span class="muted" style="font-weight:400">(optional)</span></h2>
+  <form method="post" action="{{ url_for('reports.extract', cid=c.id) }}" enctype="multipart/form-data" class="inline">
+    <div><label>Upload a PDF or text statement</label><input type="file" name="statement" accept=".pdf,.txt"></div>
+    <button class="btn secondary small" type="submit">Extract balances →</button>
+  </form>
+  <p class="muted" style="font-size:12.5px;margin-top:6px">The extraction agent proposes balances into the form below — you confirm before generating.</p>
+</div>
+
+<form method="post" action="{{ url_for('reports.generate', cid=c.id) }}">
+  <div class="card">
+    <div class="row">
+      <div class="field"><label>Reporting period</label><input name="period" value="{{ period }}"></div>
+    </div>
+    <p class="muted">Static data (salary, budget, account structure) is pre-set on the profile.
+      Enter or confirm the current balances below. Each field shows its source — a connected
+      provider, last quarter, or manual.</p>
+  </div>
+
+  {% for section in ['SACS', 'TCC'] %}
+  <div class="card">
+    <h2>{{ section }} balances</h2>
+    <div class="row">
+      {% for f in fields if f.section == section %}
+        <div class="field {{ 'missing' if f.key in missing_keys else '' }}" style="min-width:220px">
+          <label>{{ f.label }}{% if f.key in missing_keys %} <span style="color:var(--red)">• required</span>{% endif %}</label>
+          <input name="{{ f.key }}"
+                 value="{{ entered.get(f.key, f.last_value) }}"
+                 inputmode="decimal" placeholder="0.00">
+          {% if sources.get(f.key) %}
+            <span class="pill {{ 'joint' if f.key in stale else 'ret' }}">from {{ sources[f.key] }}{{ ' · stale' if f.key in stale else '' }}</span>
+          {% elif f.last_value %}
+            <span class="muted" style="font-size:11.5px">last: {{ f.last_value }}</span>
+          {% else %}
+            <span class="muted" style="font-size:11.5px">manual</span>
+          {% endif %}
+        </div>
+      {% else %}
+        <p class="muted">No {{ section }} fields for this client.</p>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+    <span class="muted">A report cannot be generated until every required field has a value.</span>
+    <button class="btn" type="submit">Generate report →</button>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,575 @@
+[00:01:48.460 -> 00:02:35.380] Hello. Hello. How's it going? Sorry for keeping you in the meeting in the meeting in the waiting
+[00:02:35.380 -> 00:02:40.900] room for too long. Listen back to back today. How are you guys doing? No problem. We're doing
+[00:02:40.900 -> 00:02:46.980] good. Thank you. What about you? I am doing well. I don't think we've met. I'm Zaki. I run the AI
+[00:02:46.980 -> 00:02:52.660] practice here. I'm just starting off like it's been a few days so very new at this but run the AI
+[00:02:52.660 -> 00:02:57.700] practice at Sagan. Excited about having this call with you guys. I reviewed the original call. I
+[00:02:57.700 -> 00:03:04.580] think that you guys had with John and Zach. With John? Yep. Yes. Perfect. And yeah, I'm just
+[00:03:04.580 -> 00:03:10.340] jumping in and we were about to start your build. So I'd love to have any chance to get more context
+[00:03:10.340 -> 00:03:15.300] before we start developing is always good. So I'm happy to meet you guys. Perfect. Great to meet
+[00:03:15.300 -> 00:03:20.020] you too, Zaki. Thank you so much for taking the time to meet with us today. We really appreciate
+[00:03:20.660 -> 00:03:27.840] it. Just a heads up, it's quite a complicated complex process. There are a lot of moving parts.
+[00:03:27.840 -> 00:03:36.480] We were filling out the data point document for you. And we were just thinking literally we said,
+[00:03:36.480 -> 00:03:43.200] I don't know how we're going to automate this. We're just going to trust your AI wizardry in
+[00:03:43.200 -> 00:03:51.760] it because we have no clue on how that's going to work. But we do have a good starting point I
+[00:03:51.760 -> 00:04:02.080] shared with you some documents with the templates basically on what we use. Did you walk through
+[00:04:02.080 -> 00:04:05.280] it together? I'd love to get more context. I'm recording this too. So that'd be really good
+[00:04:05.280 -> 00:04:08.240] input for it. Absolutely. Let me pull.
+[00:04:15.680 -> 00:04:24.960] Just want to make sure I'm not. I want to use the ones that we've cleared client information from.
+[00:04:27.120 -> 00:04:30.960] I put samples in our shared Dropbox today. Use those.
+[00:04:31.680 -> 00:04:34.720] Yes, amazing. Fantastic.
+[00:04:54.850 -> 00:04:57.250] In the onboarding materials folder.
+[00:05:05.220 -> 00:05:09.620] Start with the SACS, which is like the first one we opened.
+[00:05:17.250 -> 00:05:20.960] Okay. Let me move this because I can't see.
+[00:05:20.960 -> 00:05:32.990] Okay. So I'm actually going to let Rebecca, if you're okay with it, Rebecca, to run through it.
+[00:05:32.990 -> 00:05:41.250] Absolutely. Okay. So basically this is describing the way we like our clients to
+[00:05:42.450 -> 00:05:47.250] have their banking. So we like them to have an inflow bank account, an outflow bank account,
+[00:05:47.250 -> 00:05:51.730] and then a private reserve, which Marianne can scroll down a little bit. I can't, but there.
+[00:05:52.450 -> 00:05:59.280] So the numbers in green at the top left, we will put the client's name and their salary,
+[00:05:59.280 -> 00:06:05.200] like their actual dollars that come in after taxes because they'll make more and then taxes
+[00:06:05.200 -> 00:06:12.140] come out. So those numbers are kind of set except for when they get a new job or maybe once a year
+[00:06:12.140 -> 00:06:16.220] if they get a cost of living raise or something. So those don't change often. It's not a big deal
+[00:06:16.220 -> 00:06:24.220] for us to manage those. And then the inflow number matches that. Everything that they make
+[00:06:24.220 -> 00:06:27.630] goes into the inflow number, into the inflow number.
+[00:06:27.630 -> 00:06:31.230] Inflow's coming in through right capital or precise FB, right? Those are the two tools we're using.
+[00:06:32.670 -> 00:06:33.310] Inflow.
+[00:06:34.610 -> 00:06:35.730] Like where does this data come in?
+[00:06:35.730 -> 00:06:41.810] We are using those, but the inflow numbers should not change except again, yearly. Like
+[00:06:41.810 -> 00:06:46.050] if their tax withdrawals change, if they get a raise, things like that. So that number should be
+[00:06:46.610 -> 00:06:52.130] set. The little numbers at the bottom of the accounts that say $1,000 floor, that never
+[00:06:52.130 -> 00:06:58.910] changes. We like them to have a $1,000 buffer in their accounts. So that number just stays the same.
+[00:07:03.650 -> 00:07:06.910] Nice. Will you put us back on that screen, Marianne?
+[00:07:07.470 -> 00:07:10.830] Yep. I was trying to have this other one next to it.
+[00:07:10.830 -> 00:07:14.350] So I knew where the data was coming from, but I can't do it.
+[00:07:14.430 -> 00:07:21.790] You're good. You're good. Okay. So then again, like this is hard for me to think of how we can
+[00:07:21.790 -> 00:07:27.950] automate this at all because of the way we do it. But the red arrow with the X and it says
+[00:07:27.950 -> 00:07:36.590] $12,000 a month, that number is based off of a budgeting worksheet that we give them.
+[00:07:36.590 -> 00:07:42.990] So we know what a normal month of expenses and spending is. And then we take that and we plug
+[00:07:42.990 -> 00:07:48.110] that in and we automate a transfer at their bank from their inflow to their outflow for
+[00:07:48.110 -> 00:07:56.350] that amount every month. And then the blue arrow going down is simply the excess between the inflow
+[00:07:56.350 -> 00:08:02.270] and outflow. So I guess it could be automated in the sense that we could just enter in the
+[00:08:02.270 -> 00:08:07.580] info and it could be plugged in. Oh, yeah, absolutely. I think we could definitely do
+[00:08:07.580 -> 00:08:14.060] this one pretty easily. In fact, we can make it pretty dynamic too, I think. It could account
+[00:08:14.060 -> 00:08:21.820] for those changes, raises. That would be amazing because occasionally there's been an error when
+[00:08:21.820 -> 00:08:27.100] we forget to change the number in the blue arrow or something like that. Okay, go to the second
+[00:08:27.100 -> 00:08:38.660] page, please. So this one, usually the light blue says private reserve and that's basically
+[00:08:38.660 -> 00:08:46.260] just their high yield savings account. And this one actually doesn't have the target on it,
+[00:08:46.260 -> 00:08:52.740] but that's okay. Usually, Marianne, point to where the target is. Usually we input another
+[00:08:52.740 -> 00:08:59.460] number there just in black and it's six months of their normal expenses based off that same
+[00:08:59.460 -> 00:09:05.620] worksheet we used above and all of their insurance deductibles. So if they have a $1,000 car
+[00:09:05.620 -> 00:09:11.540] deductible, $2,000 home deductible, $1,000 health deductible, we'll add all of that together
+[00:09:12.340 -> 00:09:16.260] with six times their monthly expense and then that's their target for their savings.
+[00:09:16.980 -> 00:09:24.820] So the number that says $75,000 right now, that is where we put in their balance.
+[00:09:24.820 -> 00:09:29.780] And we get their balance on that account from their bank two days before the appointment
+[00:09:29.780 -> 00:09:35.420] when we're creating the paperwork or the documents. The investment account,
+[00:09:36.590 -> 00:09:46.190] that is usually from Schwab, Charles Schwab, and only two of us have authorization to go retrieve
+[00:09:46.190 -> 00:09:55.550] that number because of security compliance. So myself or Andrew, our boss, we will go get that
+[00:09:55.550 -> 00:10:00.910] number the day or two days before the appointment and then we have that number to put in. So that's
+[00:10:00.910 -> 00:10:09.280] just their balance right there, the $15,000. So that is SACS. That's kind of the simpler one.
+[00:10:12.900 -> 00:10:22.450] Interesting. Yeah, I'm just looking through the bills that we had. I think what you guys
+[00:10:22.450 -> 00:10:29.090] already talked to John about, it's similar to that. I think you're all close. I do think that we could
+[00:10:29.090 -> 00:10:35.520] make it like visually more appealing to the template here. I guess taking a step back,
+[00:10:35.520 -> 00:10:40.320] would you want this to be like, is the vision here to generate like a final PDF one click
+[00:10:40.880 -> 00:10:44.320] or to create a draft where we still have to do a little bit of work? Because Rebecca,
+[00:10:44.800 -> 00:10:51.520] you log into Schwab as an agent to the customer, pull that data out. You could automate all of that
+[00:10:51.520 -> 00:10:56.400] while respecting the rules, like the Schwab login is not a team login and all that good stuff.
+[00:10:56.960 -> 00:11:02.210] What's the vision that we're sort of chasing? Like really good for you guys is the first step,
+[00:11:02.210 -> 00:11:10.980] I guess. So I guess we should say that our boss Andrew created these documents and it took him
+[00:11:10.980 -> 00:11:17.380] a very long time and he is happy with the way they look. So we're not looking to change the
+[00:11:17.380 -> 00:11:22.420] appearance. This one actually is green. It's just the sample. It is in blue, our company colors.
+[00:11:23.780 -> 00:11:32.380] But I don't think he is looking for a visual change, but Marianne take it away because I
+[00:11:32.460 -> 00:11:44.290] was not involved in the start of this. So what? Well, if we could do a sample of what it could
+[00:11:44.290 -> 00:11:49.490] look like without changing it too much, but just like, Hey, we're working with your format.
+[00:11:49.490 -> 00:11:55.650] We love your format, but we're just sharing this for inspiration in case you want to use
+[00:11:55.650 -> 00:11:59.810] any of these other like, I don't know. Yeah, I'm not even advocating for like a
+[00:11:59.810 -> 00:12:03.410] visual changes. I'm just, I was just curious, like what you guys are hoping to do. Yeah.
+[00:12:03.410 -> 00:12:06.450] Can you talk me through this screen? Cause this has got a lot more data coming in as
+[00:12:06.450 -> 00:12:11.410] you know, from a bunch of different accounts and processes. So I'm, I do stuff on like on
+[00:12:11.410 -> 00:12:23.170] your first page. Okay. Yeah. So first page. I guess top of my mind, both of them, we have
+[00:12:23.170 -> 00:12:28.770] to manually input all the information. Everything. Yeah. So that would be a great
+[00:12:28.770 -> 00:12:35.730] thing to move away from where maybe we have a list, you know, like a sidebar where we input
+[00:12:35.730 -> 00:12:40.850] the information and it just automatically drops it into the PDF instead of us having to work with
+[00:12:40.850 -> 00:12:45.570] the format and making sure that everything is aligned. And because that is a big thing on this,
+[00:12:45.570 -> 00:12:54.290] if we move something, especially with the circle chart, this one gets moved and like the format
+[00:12:54.290 -> 00:13:10.990] gets, I don't know. This one's in Canva. How often do you guys move things around here? Like
+[00:13:10.990 -> 00:13:15.470] I build this thing in Canva and now I want to move this green bubble to the right and the
+[00:13:15.470 -> 00:13:19.870] red bubble to the left, for example. We don't, we're not allowed to, we're not allowed to.
+[00:13:20.830 -> 00:13:25.710] Okay. I did forget to tell you one thing where it says client example at the top.
+[00:13:26.910 -> 00:13:31.870] You put the client's name and the date up there. So that's another thing we have to remember to
+[00:13:31.870 -> 00:13:36.270] change every time. I'd love like you to send me like a PDF example of a final client, like with
+[00:13:36.270 -> 00:13:40.590] the goal and the date and all that stuff. So we can like find, like we can align around that.
+[00:13:40.590 -> 00:13:43.710] Do you like Canva more or do you like to do this in Word more? I can see a world
+[00:13:43.710 -> 00:13:52.750] where we don't want to do it either. We want the form set so nothing can move. Because if you look
+[00:13:52.750 -> 00:14:01.790] like where it says private reserve, the line is always off center. We just need it like set.
+[00:14:04.020 -> 00:14:08.500] I like it. I'm going to, okay. I think I have an idea here. Like this could be,
+[00:14:08.500 -> 00:14:11.780] this could be super interesting. And I like the idea of like we'll give you a little landing,
+[00:14:11.940 -> 00:14:21.040] a little URL, a little app. It'll have like, hey, new report, right? And struggling to think
+[00:14:21.040 -> 00:14:25.280] where we start from, like, and I want to like talk about that. Like where that client data,
+[00:14:25.280 -> 00:14:29.120] how do you decide when to create a report for a client and where that client, like you would do
+[00:14:29.120 -> 00:14:35.040] one for every customer that you have? So it depends on where the client is at on his process
+[00:14:35.040 -> 00:14:43.620] with us. The ones that are already on, we have one that's on onboarding, for example,
+[00:14:43.620 -> 00:14:48.500] the timeline of those meetings are going to change a little bit. But once they're settled with us,
+[00:14:48.500 -> 00:14:54.420] and correct me if I'm wrong, Rebecca, but after like a year, they have quarterly meetings. And
+[00:14:55.060 -> 00:15:00.020] there might be changes in that we might be meeting with them a little bit sooner or
+[00:15:00.740 -> 00:15:08.580] on the later side. But once they're like, in depth with us, and we already have this system
+[00:15:08.580 -> 00:15:12.980] down for them, then they're quarterly meetings every three months. You don't generate this
+[00:15:12.980 -> 00:15:18.340] every month for them and send it to them by email. We do this for every client meeting.
+[00:15:18.900 -> 00:15:23.460] So quarterly. But these numbers are monthly though, right? So this is like, hey,
+[00:15:23.460 -> 00:15:28.180] here's what every month looks like. And then you make those transfers every month, of course.
+[00:15:28.980 -> 00:15:35.780] Yes, because it's generally set, we build into their budget worksheet, we build in
+[00:15:37.220 -> 00:15:42.740] a little excess, like any number they give us, we round up. Our clients are high net worth,
+[00:15:42.740 -> 00:15:47.620] they're all millionaires. So they don't miss a few dollars here and there, you know.
+[00:15:47.620 -> 00:15:53.380] So we round up in their budget every month. So this is extra, like whatever number is going to
+[00:15:53.380 -> 00:15:58.260] their outflow, they don't have to be careful and watch every penny. So it stays the same generally,
+[00:15:58.820 -> 00:16:01.780] and then any excess will be transferred out into their private reserve.
+[00:16:02.800 -> 00:16:07.200] Cool. Yeah, I was just like, I mean, this is not for right now, but like for future,
+[00:16:07.200 -> 00:16:10.560] like one thing we could do, since we're doing this, if we get this automated, you could just
+[00:16:10.560 -> 00:16:13.600] send it to them by email every month, right? Here's what your numbers look like this month,
+[00:16:13.600 -> 00:16:17.040] and you don't have to even wait for that three-monthly meeting to happen, right? Like,
+[00:16:17.040 -> 00:16:21.280] just an idea. But let's try to get it to a point where it's like super easy to generate,
+[00:16:21.280 -> 00:16:26.080] and then, you know, we can do more of it. Cool, very cool. Can we scroll down? I'm just curious
+[00:16:26.080 -> 00:16:32.780] about the, well, or not scroll down, sorry, I meant the second report. I want to understand
+[00:16:32.780 -> 00:16:36.780] each component or each box there. If you can make this slightly larger, that would be helpful too.
+[00:16:36.780 -> 00:16:38.380] Yeah, yeah. All right.
+[00:16:38.380 -> 00:16:40.620] That's your savings, time and accounts.
+[00:16:41.420 -> 00:16:46.060] So let me walk you through this. So again, we have the name and date of the client in the
+[00:16:46.060 -> 00:16:51.660] top left corner. And then those green bubbles, we have, they're usually, most of our clients are
+[00:16:51.660 -> 00:16:56.620] married. So we have the spouses names, their age, their date of birth, the last four of
+[00:16:56.620 -> 00:17:01.100] their social, and those don't really change other than the age. That would be nice to auto update
+[00:17:01.100 -> 00:17:09.810] per year. Then in the upper left quadrant, I don't know where you are located.
+[00:17:11.330 -> 00:17:11.890] So I don't know.
+[00:17:12.770 -> 00:17:13.250] Austin.
+[00:17:13.330 -> 00:17:18.660] Okay, great. So you are familiar with Mexico.
+[00:17:21.700 -> 00:17:25.060] Marianne's in Mexican, but from, lives in France right now.
+[00:17:26.500 -> 00:17:27.060] You guys win.
+[00:17:29.220 -> 00:17:32.180] I'm American living in Mexico. She's Mexican living in France.
+[00:17:33.220 -> 00:17:36.980] I'm Pakistani in Austin by way of Singapore in Montreal.
+[00:17:37.620 -> 00:17:38.100] Wow.
+[00:17:42.100 -> 00:17:43.860] I'd rather be in France and Mexico, but hey.
+[00:17:45.220 -> 00:17:46.340] All right, cool. So retirement?
+[00:17:46.340 -> 00:17:50.340] I don't know. I do love Austin. Homeslice Pizza is one of my favorite places.
+[00:17:50.340 -> 00:17:55.540] So good. I used to live in California and that was, you know, from a, this report would make
+[00:17:55.540 -> 00:17:59.860] me very nervous every month and I would get it from my accountant. It was like taxes would be
+[00:17:59.940 -> 00:18:02.820] nightmare. So I like Austin a lot better now.
+[00:18:05.220 -> 00:18:09.140] Okay. So I just wanted to know if you were like familiar with all the account types.
+[00:18:10.020 -> 00:18:14.900] So you put this on the Roth IRA accounts, the 401Ks and their accounts, bank accounts,
+[00:18:14.900 -> 00:18:15.220] basically.
+[00:18:16.020 -> 00:18:20.180] So we put the last four of the account number where it says account number, we put the last four.
+[00:18:21.140 -> 00:18:27.140] We put the type of account, we put the balance. And then I actually usually take the date off
+[00:18:27.140 -> 00:18:31.460] because I think it looks messy, but we can leave the date if Andrew wants that.
+[00:18:31.460 -> 00:18:34.180] And then the cash balance in that little bubble at the bottom.
+[00:18:34.180 -> 00:18:35.860] Now the balance includes.
+[00:18:35.860 -> 00:18:39.540] They're all the same date. We just moved that to a top right thing for
+[00:18:39.540 -> 00:18:42.340] balance as of this date, or I guess some dates are different dates, I guess.
+[00:18:42.340 -> 00:18:46.740] Well, and we have the date at the top left. So really, I take it off and he's never
+[00:18:46.740 -> 00:18:49.860] complained. So I'm not, I don't care if that's on there or not.
+[00:18:50.850 -> 00:18:59.970] But the balance, like, for example, on this Roth IRA in the top left, 11,162.47, that includes
+[00:18:59.970 -> 00:19:05.730] the 316 cash. So basically the cash balance is there, but it's not, it's already added
+[00:19:05.730 -> 00:19:07.570] into the balance. So it's not separate.
+[00:19:07.570 -> 00:19:11.090] Yeah, it's your account of that, this investment in cash, right?
+[00:19:11.090 -> 00:19:14.690] Yeah, it's telling you what's invested and what you have left in cash to invest.
+[00:19:15.650 -> 00:19:24.450] Okay. So these accounts up here on the top half are retirement accounts. So it can only be
+[00:19:24.450 -> 00:19:30.930] 401ks, pensions, Roth IRAs, regular IRAs. That's all that can be up there.
+[00:19:31.810 -> 00:19:36.530] And so for this quadrant on the upper left, for example, we have the IRA and the Roth IRA.
+[00:19:37.090 -> 00:19:40.770] So this gray box at the top that says client one retirement only,
+[00:19:41.410 -> 00:19:44.050] that is the total of these two accounts for the client.
+[00:19:44.830 -> 00:19:45.630] Understood.
+[00:19:45.630 -> 00:19:50.990] Go over to the other side, same thing. This one has three. So this gray box for client
+[00:19:50.990 -> 00:19:58.530] to retirement only is these three numbers totaled. Then we go down and kind of in the center,
+[00:19:58.530 -> 00:20:06.050] we have the trust. And usually the trust is funded by putting the client's house into the
+[00:20:06.050 -> 00:20:11.810] trust. So this number is actually updated every meeting. We go look up the value of their house
+[00:20:11.810 -> 00:20:17.730] from Zillow, which I know it's not accurate, but it's a good measure of if the market's going up
+[00:20:17.730 -> 00:20:24.450] or down. Yeah. The exact dollar amount doesn't really matter in terms of the zestimate, right?
+[00:20:24.450 -> 00:20:25.410] You pull the zestimate.
+[00:20:25.410 -> 00:20:30.930] Yes. We go to Zillow, we type in their address and it just pops up the zestimate. So that's
+[00:20:30.930 -> 00:20:34.530] actually where that number comes from. Super scientific, I know.
+[00:20:36.690 -> 00:20:40.770] If you want to make zestimate minus 5%, then it's best to be profitable.
+[00:20:40.770 -> 00:20:46.290] Exactly. It goes up and down, but we always know, has the market gone up since your last
+[00:20:46.290 -> 00:20:50.610] appointment or has the market gone down? It would be different if a realtor came and assessed.
+[00:20:50.610 -> 00:20:55.650] Yeah, they're giving me a snapshot of my net worth. Honestly, every account goes up and down.
+[00:20:55.650 -> 00:20:59.090] Every trading account goes up and down pretty rapidly too, probably more than your house,
+[00:20:59.090 -> 00:21:01.170] to be honest with you, every month.
+[00:21:01.170 -> 00:21:05.410] Oh, for sure. I mean, sometimes in a day we see our clients' accounts go up or down
+[00:21:05.410 -> 00:21:06.370] like $100,000.
+[00:21:06.370 -> 00:21:10.850] Actually, 2026, right? Yeah, don't get me sorry about that. It's crazy out there.
+[00:21:11.650 -> 00:21:16.450] Cool. And so there's two kinds of accounts. Sorry, I just want to make sure I understand.
+[00:21:16.450 -> 00:21:20.530] There's two kinds of accounts essentially. There's bank accounts, which are cash essentially,
+[00:21:20.530 -> 00:21:24.050] and there's various kinds of bank accounts, right? There's retirement bank accounts,
+[00:21:24.050 -> 00:21:26.530] and there's savings accounts, and checking accounts, all that good stuff.
+[00:21:27.090 -> 00:21:30.930] And then there's joint accounts, all that stuff too. We haven't talked about joint
+[00:21:30.930 -> 00:21:34.290] accounts in here. I always see it separate out with client one, client two. How do you
+[00:21:34.290 -> 00:21:38.130] represent joint accounts would be a question I have, if that exists at all? Or is it always
+[00:21:38.130 -> 00:21:43.090] the same? And then these are all the bubbles available. We decide what bubbles they actually
+[00:21:43.090 -> 00:21:46.210] have, what kind of accounts they have. We drop those in. That would be an option.
+[00:21:46.850 -> 00:21:49.170] Let's start there. Let's talk about that. Are there any?
+[00:21:50.130 -> 00:21:56.430] Yes. So we personalize this for every client. We make however many bubbles we need.
+[00:21:57.310 -> 00:22:05.150] So on the bottom, where it says non-retirement, on the right here, we... Okay. Also, I should say,
+[00:22:05.150 -> 00:22:11.550] in most of our client situations, there is a high earning spouse and a low or no earning spouse.
+[00:22:12.430 -> 00:22:19.950] So it's very easy to just put the overflow into that. But usually, their bank accounts are on
+[00:22:19.950 -> 00:22:25.230] the bottom right. These are joint accounts. These are the accounts that are on the SACS,
+[00:22:25.230 -> 00:22:30.190] the inflow, the outflow, and the private reserve. So those are still there. Now,
+[00:22:30.190 -> 00:22:33.710] if there's no space on that side, we would move them to the other side. It doesn't matter on the
+[00:22:33.710 -> 00:22:41.150] bottom. Most of these are joint accounts. I was telling Marianne earlier, for example,
+[00:22:41.150 -> 00:22:47.310] if I had a Schwab brokerage account, I could have that with my husband and we both can contribute.
+[00:22:47.310 -> 00:22:52.750] But the retirement accounts, like you probably have for your job, it's only for you. It's
+[00:22:52.750 -> 00:22:58.510] not for a spouse. So the ones on the bottom can be mixed. The ones on the top cannot be mixed.
+[00:22:59.230 -> 00:23:03.710] Right. And I could have non-retirement accounts that are solo too, though, right?
+[00:23:03.710 -> 00:23:09.310] Yes. And we put those on here. And if the client does have it, we put it on their side.
+[00:23:10.270 -> 00:23:13.230] Just put on their side in non-retirement, basically, right?
+[00:23:13.230 -> 00:23:20.030] Yeah. For example, we have one client who gets stock options. And so on her side,
+[00:23:20.670 -> 00:23:25.790] she's got a little E-Trade account that her husband doesn't have. But it doesn't matter, really.
+[00:23:25.790 -> 00:23:31.390] But it's not retirement, really. It's options. Cool. Sounds good. And then new value of options,
+[00:23:31.390 -> 00:23:36.670] too. I'm curious about that. Is that public stock options? Where do you bring a number
+[00:23:36.670 -> 00:23:39.550] in for the value of the... I guess it's a public company. It's not a public company.
+[00:23:39.550 -> 00:23:44.110] Oh, we only update that once a year when she gets her...
+[00:23:44.110 -> 00:23:46.270] A valuation, a 4 or 9A valuation.
+[00:23:46.270 -> 00:23:49.550] Yeah. So just one time a year. And then the rest of the year, it'll have this little red
+[00:23:50.510 -> 00:23:52.430] asterisk that says it's not up to date.
+[00:23:53.520 -> 00:23:56.480] Well, I'm learning. I'm not working my accountant hard enough is what I'm learning
+[00:23:56.480 -> 00:24:00.160] in this course. I have one more of these myself. That'd be great.
+[00:24:02.240 -> 00:24:03.120] We can help you with that.
+[00:24:03.680 -> 00:24:11.120] Okay. So yeah, any non-retirement accounts, any other investments that are not retirement,
+[00:24:11.120 -> 00:24:17.840] anything else is added there on the bottom. And then when we go to add,
+[00:24:19.020 -> 00:24:24.460] we go to add these up, we do not add the trust in. Okay. So the non-retirement total right here,
+[00:24:24.460 -> 00:24:28.460] the gray bottom. This is only the accounts, not the trust.
+[00:24:29.100 -> 00:24:30.960] Gotcha. Okay.
+[00:24:32.140 -> 00:24:39.260] Then we'll go to liabilities. So liabilities are any debts that they have, car loans, mortgage,
+[00:24:40.300 -> 00:24:43.740] usually nobody, none of our clients have other debts other than those.
+[00:24:44.460 -> 00:24:48.060] So we like to have, and this one's missing the interest rate.
+[00:24:48.060 -> 00:24:55.100] We do like to have what it is. So like mortgage, whatever, mortgage, auto, we like to have the
+[00:24:55.100 -> 00:25:03.630] interest rate in a column in the middle between these, we have the balance. And then with all
+[00:25:03.630 -> 00:25:08.910] the different liabilities that we have, we total the liabilities up here at the top in that light
+[00:25:08.910 -> 00:25:16.460] gray box. Oh, here. Oh yeah. Sorry. I'm like doing it with my mouse, but you're doing it with yours.
+[00:25:17.180 -> 00:25:22.300] Okay. Nice liabilities on top is this little box is just the total of anything on the bottom.
+[00:25:22.300 -> 00:25:27.580] So sometimes there's nothing, sometimes it's one thing, it depends, but we total the liabilities.
+[00:25:28.460 -> 00:25:34.620] Then may I add all of that math is done manually. So even just automating that
+[00:25:35.680 -> 00:25:40.560] would be great. Yeah, because there's errors and we have to keep double checking and things like that.
+[00:25:40.560 -> 00:25:48.560] So now we have done all of the work on this chart. So we take these, we take all the gray boxes. So we
+[00:25:48.560 -> 00:25:54.240] take the client one retirement, we take the client two retirement, the non-retirement total,
+[00:25:55.260 -> 00:26:01.520] and the trust. This is where the trust comes in. So we add the three boxes plus the trust,
+[00:26:02.240 -> 00:26:08.560] and that is the grand total of their net worth. So your time in one retirement to total retirement,
+[00:26:08.560 -> 00:26:13.280] a non-retirement, and then trust is grand total. Those four numbers go into that and then you might,
+[00:26:13.280 -> 00:26:20.800] and the liabilities are underneath that. The liabilities are separate. We do not subtract
+[00:26:20.800 -> 00:26:26.080] liabilities from their net worth. They're just a separate box. So their net worth is client one
+[00:26:26.080 -> 00:26:32.430] retirement, client two retirement, non-retirement, trust, and then liabilities are separate underneath.
+[00:26:32.430 -> 00:26:38.190] So that's how we come to all the numbers. Cool. Amazing. And we detailed that for you in a
+[00:26:38.190 -> 00:26:44.960] document so you can go back to it. Yeah. Okay, let's talk about where we get the numbers. Yes,
+[00:26:44.960 -> 00:26:52.240] yes, yes, that's exactly right. Okay. So this part is also tricky. Oh, we didn't show him the
+[00:26:52.240 -> 00:26:58.080] monthly expense. That's the only one we were missing, just so he knows from this for the SACS.
+[00:26:59.310 -> 00:27:10.110] So for SACS, the information we pull from here are agreed on amounts from their monthly expense
+[00:27:10.110 -> 00:27:15.470] worksheet, which looks like this. They fill it out. You mean the outflow, right? The expenses
+[00:27:15.470 -> 00:27:20.430] outflow and that. Yes, yes, expenses outflow. Exactly. Like the stuff that's going into
+[00:27:20.990 -> 00:27:26.190] like the non-private reserve stuff. What they earn, how much they need, what's going to be
+[00:27:26.190 -> 00:27:32.030] transferred, what goes to the private reserve. Understood. That makes a lot of sense.
+[00:27:32.830 -> 00:27:37.470] Perfect. So we'll go through that. But when you say monthly agreed upon amount, that's like
+[00:27:37.470 -> 00:27:42.030] that, the guy that's been moving, you have them fill out a sheet of expenses sheet when their
+[00:27:42.030 -> 00:27:46.910] intake, when they're getting onboarded, I assume. Yeah. And then you just transfer what
+[00:27:46.910 -> 00:27:53.630] the expenses are to the red account. Yeah. So let's say their regular monthly bills were like
+[00:27:53.630 -> 00:28:00.590] $15,000. We would round up and they probably would be transferring like $18,000 every month
+[00:28:00.590 -> 00:28:05.470] to the outflow. So there's a buffer. So their inflow is like 40 grand and everything remainder
+[00:28:05.470 -> 00:28:10.590] goes down to like the private reserve and then gets divided up based on whatever you have.
+[00:28:10.590 -> 00:28:14.910] We want them to live in like a mental state of abundance. So they're never like,
+[00:28:14.910 -> 00:28:17.870] oh my gosh, do I have enough money in my account to go out to dinner?
+[00:28:19.870 -> 00:28:25.790] So that's why we round it up. And then just periodically when they do, like we call it
+[00:28:25.790 -> 00:28:29.950] an audit at the end of the month, it takes like 15 minutes. They just account for what they
+[00:28:29.950 -> 00:28:36.030] spent and the actual numbers. Then they can transfer any excess they did not spend out into
+[00:28:36.030 -> 00:28:40.980] the private reserve as well. Do you send them the sheet in advance or after the fact? Is it
+[00:28:40.980 -> 00:28:46.560] the end of the month or the start of the month? They do the audit at the end of the month and we
+[00:28:46.560 -> 00:28:52.000] actually never see the audit. That's just something they do on their own. What I mean to say is that
+[00:28:52.000 -> 00:28:56.640] they get the expenses sheet after the audit is done and they move that amount into the private
+[00:28:56.640 -> 00:29:02.480] reserve. So we give them the monthly expensive sheet when they first start and then we just
+[00:29:02.480 -> 00:29:09.680] adjust as necessary. So if we're in the quarterly update, that goes out at the end
+[00:29:09.680 -> 00:29:13.760] of the quarter before. And so basically what I mean to say is the stuff that they do to like,
+[00:29:13.760 -> 00:29:17.280] you know, they fill out their sheet. They go like, guys, they have three grand on my expenses.
+[00:29:18.080 -> 00:29:22.640] I can move that into private reserve. That's after the sheet has gone out, right? Like that's,
+[00:29:23.440 -> 00:29:31.200] does that make sense? Yes, it makes sense. I understand now. No. So we prepare this,
+[00:29:32.080 -> 00:29:38.160] but we have access to their bank balance. Right. So we just update it without ever
+[00:29:38.160 -> 00:29:42.960] talking about it unless they need to talk about it. Because if they're like under budget and
+[00:29:42.960 -> 00:29:47.200] transferring excess, we don't really talk about it. If they're overspending and they keep
+[00:29:47.200 -> 00:29:52.240] transferring excess into their outflow, then we talk about it and revisit it. But otherwise,
+[00:29:53.650 -> 00:29:58.370] once they get it set, they're, they're all kind of just, they're just normal people. Like they
+[00:29:58.370 -> 00:30:06.030] don't spend excessively usually. Um, so we don't revisit it often, if that makes sense.
+[00:30:06.830 -> 00:30:11.310] Very nice. We show them. Yeah. And this is a snapshot of a moment in time, basically. Right.
+[00:30:11.310 -> 00:30:15.870] So like, if you generate the report today, it's, I think that's the case before. Yeah.
+[00:30:15.870 -> 00:30:19.710] Right. Um, I'd love to understand where the data is coming from.
+[00:30:20.640 -> 00:30:29.310] Okay. Okay. We're back. So we can start with Saks. Is that okay? Or would you like me to
+[00:30:29.310 -> 00:30:33.790] zoom in? No, no, start here. This is great. I'd love to see like, especially the site. Yeah.
+[00:30:33.870 -> 00:30:39.790] Perfect. Um, so all credit to Rebecca, because she was the one that helped me put this together.
+[00:30:39.790 -> 00:30:47.950] But the inflow, like we said, we pull a client salary and we gather this info from our,
+[00:30:48.590 -> 00:30:53.700] when we onboard them, if it changes, where do you find this? Sorry, I'm cutting off.
+[00:30:54.740 -> 00:30:57.940] Let's say I'm preparing a report like six months after onboarding has ended and you have a new
+[00:30:57.940 -> 00:31:02.960] person coming in, where would they find what the agreed upon inflow was essentially?
+[00:31:04.190 -> 00:31:08.590] Is there like a record? Is there like a record somewhere of customers, like a CRM,
+[00:31:08.590 -> 00:31:14.910] like a, like an air table or something? It's on that. It's on that Excel spreadsheet. Yeah.
+[00:31:14.910 -> 00:31:19.390] I see. Okay. That budgeting spreadsheet that they fill out and we help them round up. We
+[00:31:19.390 -> 00:31:23.710] just have a copy of that. And it's actually an Excel sheet, not a Google sheet, not in the,
+[00:31:23.710 -> 00:31:27.470] I'm trying to figure out, can I read this? Like, can, can my, can my, can the AI agent
+[00:31:27.470 -> 00:31:31.870] we build for you guys just go read that automatically and save you the step of
+[00:31:31.870 -> 00:31:36.110] entering? Like, you know, does that make sense? Well, we can submit the monthly,
+[00:31:39.280 -> 00:31:44.240] the Excel spreadsheet. We don't have this recorded somewhere internally in a system that, hey,
+[00:31:44.240 -> 00:31:50.880] client one and client two. Nope, not yet. Okay. Oh yeah. Yeah. Not yet.
+[00:31:52.050 -> 00:31:57.570] We're a very small operation. There's three of us. Yeah. That's why you need more agents.
+[00:31:57.570 -> 00:32:03.250] So we're happy to be helping you guys. We can help customers without adding too many more
+[00:32:03.250 -> 00:32:06.770] people. I'm curious, like how many time, how many customers have you guys got that you're
+[00:32:06.770 -> 00:32:16.500] sending this out for? So our fees are, our fees are very high and we don't need that many clients.
+[00:32:17.300 -> 00:32:23.300] If that makes sense, we have about six, like regular, they pay us monthly. And then we have
+[00:32:25.540 -> 00:32:32.610] assets under management, you know, all assets, all, all retirement investment plans charge a fee.
+[00:32:32.610 -> 00:32:40.190] And so we have, we have income from that as well. So it's important. Like, I mean, we're not doing
+[00:32:40.190 -> 00:32:45.230] this process so many times every month that you can really put eyeballs on it, basically. And like,
+[00:32:45.230 -> 00:32:50.990] really like get it right, essentially, right? Like that's what we can, but you know, Marianne
+[00:32:51.630 -> 00:32:59.390] is like a wonderful, wonderful assistant. But before her, we went through three in
+[00:33:00.420 -> 00:33:05.220] like the first five months that I worked here. And then we didn't have an assistant
+[00:33:05.220 -> 00:33:12.660] for three months before we got her. So it was like, I was doing my job and her job. And
+[00:33:13.460 -> 00:33:18.580] and then for that with the other assistants, it was just like mistake after mistake after mistake.
+[00:33:18.580 -> 00:33:24.620] And you know, so Marianne's doing great, but it would be nice for everybody to automate it
+[00:33:24.700 -> 00:33:32.860] and have a more. Yeah, yeah. If we can take this takes us a day to prepare, if we could take this
+[00:33:32.860 -> 00:33:40.660] down to an hour, where we don't have to manually do the math where some of these might not be AI.
+[00:33:41.980 -> 00:33:53.950] I worked temporarily for a like Google advertising company. And they had the reports that they
+[00:33:53.950 -> 00:34:02.910] shared with the clients on a monthly basis. And I think it was done through Google data,
+[00:34:02.910 -> 00:34:10.830] something like that. It was a Google software. And basically, we had a studio. Sorry,
+[00:34:11.730 -> 00:34:17.330] Data Studio, Google Data Studio, Data Studio. Yes. Something like that would be great. I mean,
+[00:34:17.330 -> 00:34:21.730] there are some things that are not going to be updated automatically. And that we know that have
+[00:34:21.730 -> 00:34:33.840] to be input manually. That's okay. But if the format, it lives in a place where it doesn't get
+[00:34:33.840 -> 00:34:41.360] messed up if we input. It's just like a preset format. That would be great. If it does the math
+[00:34:41.360 -> 00:34:47.760] for us, that would be fantastic. And then the things that we can automate, then that would
+[00:34:47.760 -> 00:34:55.360] be of a great plus, too. Yeah. Well, and I just want to say for compliance, we cannot use anything
+[00:34:55.360 -> 00:35:04.480] Google will have to be something secure. Even AI is actually really tricky because
+[00:35:06.380 -> 00:35:10.460] I can speak to that. And let's hold that thought till the end of this call, because I fully
+[00:35:10.460 -> 00:35:16.860] understand. But then at the same time, there's the way we use AI stores, nothing for training,
+[00:35:16.860 -> 00:35:21.100] to use like regular commercial AI, everything you put in there is then used for training the next
+[00:35:21.100 -> 00:35:30.060] version. But we don't do that. And so that's great. But yeah, I'm imagining a role where we build you
+[00:35:30.060 -> 00:35:33.660] I'm sorry, I'm painting a picture, but I tried to stay up solutions. But I want to make sure we get
+[00:35:33.660 -> 00:35:39.900] this just right for you guys. And so we dial it in. I'm imagining a world where we build you a
+[00:35:39.900 -> 00:35:45.740] simple portal, right? Where you're able to set up a new customer. And like you have six at the
+[00:35:45.740 -> 00:35:49.580] moment, that might be 12 next year, right? And we want to be able to get you there without adding
+[00:35:49.580 -> 00:35:54.220] more employees. And that's the beauty of AI and agents especially. So you set up a customer, you
+[00:35:54.220 -> 00:35:57.100] fill up a few fields, and these are fields that don't change very often, your inflow, your
+[00:35:57.100 -> 00:36:02.380] outflow, your inflow, your outflow, you know, stuff that's static, not bad. And maybe you
+[00:36:02.380 -> 00:36:06.780] add like, Hey, here's all the accounts associated with them. And when I say add accounts, I mean,
+[00:36:06.780 -> 00:36:10.700] just give me the last four digits or whatever, right? Or like, Hey, Wells Fargo account number.
+[00:36:11.260 -> 00:36:14.860] And if you have like any keys, I'm not saying passwords, keys that allow us to log in
+[00:36:14.860 -> 00:36:20.830] automatically. What we can then do is we can every month, or when you hit a button saying
+[00:36:20.830 -> 00:36:26.780] generate new reports, it would go pick up your customer list, you know, figure out the
+[00:36:26.780 -> 00:36:30.940] stuff that's static is easy pulls that out of that of that CRM that we built a very simple,
+[00:36:30.940 -> 00:36:34.460] like, this will be an Excel spreadsheet, it won't look anything complicated with like a bunch
+[00:36:34.460 -> 00:36:38.620] of columns, pulls that out, pulls out details about the bank accounts that we need to pull
+[00:36:38.620 -> 00:36:42.380] information from, right? Because everyone has a different number of accounts. And I imagine
+[00:36:42.380 -> 00:36:46.620] there'll be like types there, they'll be like, this is a checking account, checking or savings,
+[00:36:46.620 -> 00:36:50.940] this is an investment account. So then we know, hey, this guy can have like an investment account
+[00:36:50.940 -> 00:36:55.100] amount, and we got to pull the cash amount too, versus this guy's just cash, right? And this
+[00:36:55.100 -> 00:36:59.020] other guy is like something else entirely. So we could have, I see people who have accounts,
+[00:36:59.020 -> 00:37:03.020] I see bank accounts, and I see investment accounts, right? And that's basically the
+[00:37:03.020 -> 00:37:07.580] two types we have, the third I'd love to know, pulls that information and automatically,
+[00:37:07.580 -> 00:37:11.740] right? So that stuff is automated as much as possible, when it can, sometimes it won't be
+[00:37:11.820 -> 00:37:14.700] able to pull it automatically. So like, sometimes, like, for when you have like the,
+[00:37:15.820 -> 00:37:19.500] the investment accounts, the shop accounts, right? And so it won't pull it automatically.
+[00:37:19.500 -> 00:37:21.740] But then that's a decision you guys make, right? Like, if you see us,
+[00:37:22.300 -> 00:37:26.300] in version one of this is able to handle basic accounting information and pulling in
+[00:37:26.300 -> 00:37:30.780] automatically, then version two, our next edit on this could be, hey, pull that into
+[00:37:30.780 -> 00:37:35.900] automatically, right? And that we can do in a very secure way, using your credentials,
+[00:37:35.900 -> 00:37:39.980] Rebecca, without giving access to anybody else, right? Only the agent have access with you. And
+[00:37:39.980 -> 00:37:45.500] that's better, more trust, it's easier to trust than like, and that can be read only access to.
+[00:37:45.500 -> 00:37:48.060] So that doesn't have to be right access to those accounts. And then we can set them up
+[00:37:48.060 -> 00:37:52.220] in the tokens correctly, too. So we can go next step and pull all of them, but it'll try to pull
+[00:37:52.220 -> 00:37:58.220] as much information as it can, in the account sheet, right? The next other sheet you showed me,
+[00:37:58.780 -> 00:38:05.390] and create like, draft one of this sheet, but not quite yet fully, it will say, hey,
+[00:38:05.390 -> 00:38:11.310] I don't have these four things, or these six things. And so can you pull those in manually?
+[00:38:11.310 -> 00:38:16.590] And then once you pull those, put those amounts in, click generate, it will create a PDF for you.
+[00:38:17.310 -> 00:38:21.230] Maybe it creates it for you in Canva as well. So you can also move bubbles around,
+[00:38:21.230 -> 00:38:26.990] you need to make some edits, right? Like with PDF. That sounds great.
+[00:38:28.180 -> 00:38:33.540] So I'm just thinking in right capital, which is where we get a lot of our information from
+[00:38:34.500 -> 00:38:40.820] the other one, the one with all the little circles. Right, capital is really tricky because
+[00:38:41.700 -> 00:38:48.620] it's not always up to date. So when I look on to write capital, we have to go refresh,
+[00:38:49.500 -> 00:38:58.450] like let it re-sync all the client's accounts. And then sometimes, most of the time, there are
+[00:38:58.450 -> 00:39:02.930] still several accounts that aren't linked. And so then I have to look at that exact account,
+[00:39:02.930 -> 00:39:08.130] and I'm like, where is this account located? How do I get an updated number? So sometimes
+[00:39:08.130 -> 00:39:12.930] I'll have to go ask the client for a statement. Sometimes I'll have to log into a separate website
+[00:39:13.490 -> 00:39:22.530] if I have access to whatever. What it can do is it will first try to like fiddle around with
+[00:39:22.530 -> 00:39:26.850] write capital's API to make sure it's updating that information. Sometimes you can, I haven't
+[00:39:26.850 -> 00:39:30.530] looked at the API too deeply, but you have to push it to update, and then it updates,
+[00:39:31.490 -> 00:39:35.250] and then you can pull that in. But it will still have certain fields that are missing.
+[00:39:35.250 -> 00:39:40.290] I'll flag those. And you can't generate a full report till it does that. It could create a drop
+[00:39:40.290 -> 00:39:44.610] for you if you really want to see it. But what it'll ask you is, hey, I bought these six numbers,
+[00:39:44.610 -> 00:39:50.130] I need these four. For these accounts that are set up in the CRM, you still need to find me
+[00:39:50.130 -> 00:39:56.130] numbers. So maybe we could manually override also and just say like, use the old number.
+[00:39:56.130 -> 00:40:00.450] Because write capital will have numbers from like six months ago or a year ago or whatever.
+[00:40:01.010 -> 00:40:04.290] You could give it some obviously good one, like use the last number, you can have a little button
+[00:40:04.290 -> 00:40:07.890] on it. And then by the way, those buttons are real time. So like you could click that button
+[00:40:07.890 -> 00:40:12.050] and see what it pulls in. Or you could say that number looks wrong. I'm going to find this out the
+[00:40:12.050 -> 00:40:15.410] other way, right? Manual override where it's put a number and you're like, nah, I want to add
+[00:40:15.410 -> 00:40:20.370] this number instead. So like, you still get, Marianne, you still have to like do a review
+[00:40:20.370 -> 00:40:24.850] of the draft, right? Yeah. You don't have to build from scratch. And then all the internal
+[00:40:24.850 -> 00:40:32.210] rules like this minus this is equal to private reserve and that goes, that's just baked into
+[00:40:32.210 -> 00:40:35.650] the, you don't have to think about that, right? Yeah. So you're only focusing on the things
+[00:40:35.650 -> 00:40:39.570] that only you can do essentially. The idea of it living in a portal.
+[00:40:43.860 -> 00:40:50.260] The idea of it living in a portal work, because right now we use Canva, we use Word, we use the
+[00:40:50.340 -> 00:40:58.900] monthly spreadsheet, but it's all, it all lives in different places. And to me, that is very
+[00:40:58.900 -> 00:41:09.220] stressful. We can go to one place, one portal where we have this live. And it just, we work
+[00:41:09.220 -> 00:41:16.820] on all of like the circle chart and the sacks on the same spot. And it's being stored because
+[00:41:16.820 -> 00:41:23.860] also a big portion of it is where is it being stored? Can we have it drop it into their Dropbox
+[00:41:23.860 -> 00:41:29.700] automatically linked to Dropbox and it's being stored proactively instead of us having to
+[00:41:30.260 -> 00:41:37.140] look around for files all the time. That just, that portion alone sounds great,
+[00:41:37.140 -> 00:41:42.180] having everything in one spot, being able to work on both of them in one same spot, same format.
+[00:41:42.900 -> 00:41:55.620] And then even if we can add like this, just like a little SOP that we can refer to directly on that
+[00:41:55.620 -> 00:42:01.380] portal, that would be fantastic. If anyone else would be super helpful. What about the monthly
+[00:42:01.380 -> 00:42:06.980] expense worksheet? If we're dreaming big here, couldn't that be a piece of the portal where
+[00:42:07.700 -> 00:42:12.580] the clients can only access that, but that's a link we can send out rather than an Excel file
+[00:42:12.580 -> 00:42:16.900] that we're going to have to update. I think what we should do is, I mean, sorry, sorry. We should
+[00:42:18.030 -> 00:42:21.710] pick out one problem and let's take a step back. Here's what I'm very good at.
+[00:42:23.070 -> 00:42:24.990] You can't solve everything at once.
+[00:42:24.990 -> 00:42:28.270] No, we can. We absolutely can. And I like how John explains it. It's,
+[00:42:29.710 -> 00:42:35.490] it's, you know, we're building Lego city, but we've got to find one brick at a time, right?
+[00:42:35.490 -> 00:42:36.770] Yeah, I love that.
+[00:42:36.770 -> 00:42:43.330] But what I'm loving about this is I think we build you decline portal. And that seems to be
+[00:42:43.650 -> 00:42:47.330] like there's a bigger, there's a problem of repetitive doing things repeatedly. But like,
+[00:42:47.330 -> 00:42:50.610] I think what you said, Marianne, about like, there's no central place for a client to kick,
+[00:42:50.610 -> 00:42:55.010] you don't have to keep things off from or store data, like basic onboarding data.
+[00:42:56.050 -> 00:42:59.730] If you can just build you that and then yeah, right now we could just input that manually
+[00:42:59.730 -> 00:43:04.290] to the portal one time, because some of these things are one time. And then use this for
+[00:43:04.290 -> 00:43:08.530] like solving that generation. Our goal is to build you the portal, but really the goal is to
+[00:43:08.530 -> 00:43:12.850] like solve the problem we solve with like generating PDFs of their monthly reports,
+[00:43:12.850 -> 00:43:13.410] basically quarter.
+[00:43:13.410 -> 00:43:16.370] And I know that that is something that Andrew wants. He wants.
+[00:43:16.370 -> 00:43:21.090] But we can bring that same, we can come back to it and say, now, what else can we do of
+[00:43:21.090 -> 00:43:25.010] this portal? And oh, we can build you agent number two, and this is your onboarding agent.
+[00:43:25.010 -> 00:43:29.970] So you go like, I don't want to enter stuff manually into this guy. Here's an email address,
+[00:43:29.970 -> 00:43:33.650] send them our onboarding form and let them fill it out. And it can be really interactive.
+[00:43:33.650 -> 00:43:38.130] You can send them reminders automatically. And then ping you guys only when we've
+[00:43:38.130 -> 00:43:41.250] sent them like four reminders and they haven't done anything for like a week, right?
+[00:43:41.250 -> 00:43:45.490] And then you're like, Hey, you guys should pull it. Yeah, have Andrew call them, right?
+[00:43:46.050 -> 00:43:51.010] And so I think that's the beauty of it. Like we can build you like it's like instead of
+[00:43:51.010 -> 00:43:55.730] promising you everything on day one, I want to really focus on something that can solve a really
+[00:43:57.220 -> 00:44:01.060] big problem or a big enough problem for you guys, because only $500. Also,
+[00:44:01.060 -> 00:44:05.060] like we charge you a credit to build this. So it's like, we scope it down to like a very
+[00:44:05.060 -> 00:44:10.420] small, narrow problem. And then we can add more to it, right? Agent two, and I'm sure you'll need
+[00:44:10.420 -> 00:44:15.220] revisions on this too. You're going to come to me and go like, Hey, can you pull all this information
+[00:44:15.220 -> 00:44:19.540] directly instead of having us enter stuff? And that can be like a direction we take it in.
+[00:44:19.540 -> 00:44:23.700] Or can you like also do onboarding or can you do both? So it's really important that we show you
+[00:44:23.700 -> 00:44:26.820] guys the power of these agents with one very specked out thing. I think I have a really good
+[00:44:26.820 -> 00:44:30.580] example here that we can help with. But then it's really good to think about what else can
+[00:44:30.580 -> 00:44:34.980] we help with. And I think that comes down the pike, right? Once you guys are really seeing the value
+[00:44:34.980 -> 00:44:39.140] and what we built you over here. Yeah. Yeah. We're the only software company is going to be like, Hey,
+[00:44:39.140 -> 00:44:42.580] don't buy more software from us. Stick to one thing and then we'll stop there and then we'll go.
+[00:44:45.140 -> 00:44:49.700] Okay. Like when you say let's build a client portal, is this a website?
+[00:44:50.900 -> 00:44:54.420] Well, yeah, it'll be a web app. Like it'll be an app, you log into it, it'll be like,
+[00:44:55.300 -> 00:45:00.500] and you know, we hope and, and we have to pay for hosting for that. Nope. Nope. You don't
+[00:45:00.500 -> 00:45:06.180] pay for hosting as good question. So as long as you're a member of Sagan, which is, you know,
+[00:45:06.180 -> 00:45:11.540] what we really want you to be the monthly. Yes. We charge you a flat fee to build it.
+[00:45:12.260 -> 00:45:18.020] And so after this call, I'm going to like create a spec, right? And send you a spec over email
+[00:45:18.020 -> 00:45:21.860] and say, Hey, Rebecca and Marianne, here's what we spoke about. Here's what we're going to
+[00:45:21.860 -> 00:45:25.540] build for you. Here's a one-liner and here's like three bullets on what it's going to do,
+[00:45:25.540 -> 00:45:30.020] right? Covering the, and then you give it a thumbs up and you say, yeah, build it. We
+[00:45:30.020 -> 00:45:34.180] burn one credit from your plan, which is like $500 or you can just pay for it if you want to
+[00:45:34.180 -> 00:45:38.900] keep the credit. I think we, we still have like two credits, I think. Yeah. Some folks tend to want
+[00:45:38.900 -> 00:45:41.700] to like, Hey, I'm hiring to build this here. So I'll just keep the credits, but I want to
+[00:45:41.700 -> 00:45:45.380] burn. Like, uh, I'll just give you guys money. So read your call, but you can do it when I
+[00:45:45.380 -> 00:45:50.180] credit and we'll go build it for you. And that's flat. It's one time. It's not like
+[00:45:50.180 -> 00:45:54.660] a monthly fee or anything, right? And we'll host the app for you. We'll host the infrastructure. We'll
+[00:45:54.660 -> 00:45:59.220] host, we'll even monitor up time, make sure it's still working. You know, it won't have bugs in
+[00:45:59.220 -> 00:46:03.860] it and stuff. Um, and you only pay for usage from that point onwards. What that means is we're
+[00:46:03.860 -> 00:46:07.460] charging you every time you use it for like the data and the tokens you're using, the AI using
+[00:46:07.460 -> 00:46:13.140] inside it, we charge the cost plus 20%. So like it's flat, you know, you're paying tens of
+[00:46:13.140 -> 00:46:17.620] dollars a month, not hundreds of dollars a month and you're getting really custom software at
+[00:46:17.700 -> 00:46:22.420] scale. So perfect. And that's where the Lego bricks come in, right? We've got to scope it down to
+[00:46:22.420 -> 00:46:26.660] something very manageable and then we can launch that and then do more of those essentially. All
+[00:46:26.660 -> 00:46:32.980] right. I want to hear about the incoming, like, so we've got, uh, the data that's incoming here.
+[00:46:32.980 -> 00:46:37.780] We've got bank accounts and they're coming in through, do you see the right capital? Is that
+[00:46:37.780 -> 00:46:44.340] the company? So bank accounts, we usually get through Pinnacle bank and we request that by
+[00:46:44.420 -> 00:46:50.580] email a couple of days before the meeting, their personal bankers, their personal bankers for our
+[00:46:50.580 -> 00:46:55.860] clients. So you actually ask all your customers to sign up for like Pinnacle bank as a, as a, as a,
+[00:46:55.860 -> 00:47:01.700] yes. And we work very closely with the bankers. So at any point we have access to request
+[00:47:02.340 -> 00:47:07.860] all of their balances or like their statement history or anything like that. Very cool. Um,
+[00:47:08.580 -> 00:47:13.620] does that, is that an email you send out manually? And they send us a secure email
+[00:47:13.620 -> 00:47:21.500] that we have to log on. Yeah. Okay. We'll have to, where I see challenges here will be
+[00:47:22.380 -> 00:47:26.220] like getting some of this, it'll be easy to fetch, right? And then some of it is going to be a little
+[00:47:26.220 -> 00:47:30.380] bit harder to fetch the stuff. That's like one time easy to fetch. You import that one time.
+[00:47:30.380 -> 00:47:35.740] It's like we pulled that in, um, all the bank and then Schwab is like, and you mentioned Schwab,
+[00:47:35.740 -> 00:47:40.060] which is basically Andrew and Rebecca log in as authorized users and pull that data. And those
+[00:47:40.140 -> 00:47:45.100] are the only two kinds of accounts you have, like by account of Pinnacle or right. Capital
+[00:47:45.100 -> 00:47:50.700] is an overview of like they could have their liabilities on there. Like their, their car
+[00:47:50.700 -> 00:47:56.940] loans, their mortgages, they can link their investment accounts that are outside of Schwab.
+[00:47:56.940 -> 00:48:01.900] Schwab are the ones we meet, but they, you know, some have fidelity or Edward Jones or whatever
+[00:48:01.900 -> 00:48:08.140] from previous jobs. I imagine right. Capital kind of gives us a little peek, but right
+[00:48:08.140 -> 00:48:16.220] capital, that login for sure cannot be shared with any, um, agent because it's not even my
+[00:48:16.220 -> 00:48:22.780] login or Andrews. It belongs to somebody Andrew used to work with. Um, and we have access to
+[00:48:22.780 -> 00:48:30.380] that program through him, but I don't think it's a big deal if we built the agent to say,
+[00:48:31.540 -> 00:48:36.260] enter in the Schwab info, enter in the Pinnacle info, enter in the right capital,
+[00:48:36.260 -> 00:48:39.780] and then I'm going to place it in the right thing, the right spot.
+[00:48:41.490 -> 00:48:46.050] Because I don't think we can give it access to any of these, any of those three things.
+[00:48:47.010 -> 00:48:52.130] I mean, I know that right capital has an API so you might not, I mean, but, but there's
+[00:48:52.130 -> 00:48:55.010] two complexities here, right? It's like, Hey, how do you give it access? And then how do you
+[00:48:55.010 -> 00:48:58.930] get past the fact that it's not your account, which might be the bigger prayer barrier. Um,
+[00:48:59.730 -> 00:49:05.490] I would say not to trust right capital that much just because their own API, like how they
+[00:49:05.490 -> 00:49:13.070] connect the other accounts is not perfect. Um, like we've seen it struggle a lot and it's not
+[00:49:13.070 -> 00:49:20.270] synced. Um, they have like delays and information, or there are some accounts that cannot be plugged
+[00:49:20.270 -> 00:49:24.990] in to write capital just because you can make that second version. Yeah. If you make that a second
+[00:49:24.990 -> 00:49:31.230] version, we go like, um, yeah, I can see as, I can see us finding ways to minimize that. And maybe
+[00:49:31.230 -> 00:49:34.190] we just build you something and move your customers off, right? Capital, if that's all they're
+[00:49:34.190 -> 00:49:38.190] hosting in their legacy, because all the connections are coming in through like Plaid,
+[00:49:38.190 -> 00:49:42.430] right? Or one of those like third party tools. So they're not building each of these connections
+[00:49:42.430 -> 00:49:45.390] and separately, you could just connect you into Plaid and then have you, but then I think that
+[00:49:45.390 -> 00:49:50.510] might be the next one or the one after that that we do for you. What is precise FP? I see that
+[00:49:50.510 -> 00:49:57.870] you have that mentioned in your original meeting too. Um, we use precise FP. So, uh, they do like
+[00:49:57.870 -> 00:50:04.700] their crop client profile there. They have their age of birth, uh, their date of birth. They have,
+[00:50:05.660 -> 00:50:14.540] um, a listed family, for example. Um, it's just, we send them a questionnaire through precise FP
+[00:50:14.540 -> 00:50:20.380] that they fill out during like different stages of the onboarding. So the advisors that they work
+[00:50:20.380 -> 00:50:28.850] with are also there. Um, it's just, I would say the closest thing we have to a CRM where
+[00:50:28.850 -> 00:50:35.650] all of the data for each client is stored in. Interesting. Okay. But we don't, since we have
+[00:50:35.650 -> 00:50:39.330] six customers, I feel like clients, we should probably upload them in one time directly. We
+[00:50:39.330 -> 00:50:43.330] don't have to like build like a, like a hook into, do you see any reason to build a hook into
+[00:50:43.330 -> 00:50:49.810] precise FP? No, no, no, no, no, no. I think we can manually input the information one by one.
+[00:50:49.810 -> 00:50:54.770] Okay. I think I have a good sense and feel for version one. I'll just like say it back to you
+[00:50:54.770 -> 00:51:00.130] guys. And then you can like, um, tell me if I have a good sense of it. I think we need to build you
+[00:51:00.130 -> 00:51:05.470] guys. Uh, okay. There was a key constraint you had laid out in the previous build, which was like
+[00:51:05.470 -> 00:51:10.110] zero manual data entry, which Andrew and Zach, Andrew and John and Zach had talked about.
+[00:51:10.110 -> 00:51:13.550] I think we get to that constraint because like there's going to be some data entry over here
+[00:51:13.550 -> 00:51:17.070] and I have a good sense and it's always good to talk to the folks that actually do the work
+[00:51:17.710 -> 00:51:24.030] and that's the big one. And so I think everything else we talked about works makes sense. We're
+[00:51:24.030 -> 00:51:28.510] going to build you a system where you can insert clients, right? One time like that can come up
+[00:51:28.510 -> 00:51:32.830] precise FP, or you can just add them in manually. It doesn't matter. Um, that's your intake
+[00:51:32.830 -> 00:51:36.990] information, including accounts that they link, all the accounts that they have, right? So you'll
+[00:51:36.990 -> 00:51:42.110] be able to add link, like just the information that we need to create the PDF. And then we're
+[00:51:42.190 -> 00:51:46.750] going to give you the ability to click, like create a new report, right? And that report,
+[00:51:46.750 -> 00:51:50.270] since it doesn't have to be like, you can just click a button for it to generate a new report.
+[00:51:51.390 -> 00:51:56.990] Try to pull in as much information as it can, right? Now it'll pull in stuff from onboarding.
+[00:51:57.740 -> 00:52:02.620] It'll pull in stuff from, um, like whatever it has access to, but it doesn't have access to
+[00:52:02.620 -> 00:52:08.460] any live data on like reporting on numbers. So, but it can, and correct me if I'm wrong,
+[00:52:08.460 -> 00:52:12.220] right? Like if I, because the background details are coming from, right,
+[00:52:12.220 -> 00:52:15.740] which we can't trust and don't have access to directly. And then there's like,
+[00:52:15.740 -> 00:52:18.940] so what we need to do is consolidate all the stuff that needs to go into it
+[00:52:18.940 -> 00:52:22.220] and give you a little checklist. So it goes like, Hey, enter everything in here,
+[00:52:22.860 -> 00:52:29.340] right? And then once you're done with that, you hit generate and that creates a report
+[00:52:30.060 -> 00:52:34.060] with all the rules that you talked about, looks better, lines are aligned. Look, you know,
+[00:52:34.060 -> 00:52:36.780] we can make it, we can make it exactly the same, but like make it look a little bit more
+[00:52:36.780 -> 00:52:41.260] polished and like, you know, get it to like, I like that, I like that a little revamp.
+[00:52:41.260 -> 00:52:46.140] I think we won't change the format at all. We'll just change the user experience and then the user
+[00:52:46.140 -> 00:52:51.820] interface. Basically is how we talk about it in software and give a little paint job and boom,
+[00:52:51.820 -> 00:52:59.100] ready to go. And then you have that in Canva as a draft so that you can change, make visual
+[00:52:59.100 -> 00:53:02.700] changes to it if you need to, or you can download as a PDF right there, both from the same
+[00:53:02.700 -> 00:53:09.980] interface. You can export to Canva or download as PDF. You get choices and perfect. Oh, okay.
+[00:53:09.980 -> 00:53:15.340] Perfect. Yeah. I think that's good. It won't save the report. You can just download it
+[00:53:15.340 -> 00:53:20.140] or you can send it to Canva and Canva will save it for you. Right. So that way you it's, it's,
+[00:53:20.140 -> 00:53:23.580] it's more robust. And then we have future directions. We have two future directions
+[00:53:23.580 -> 00:53:27.420] we talked about. We can bring that data in automatically and we can talk about that.
+[00:53:27.420 -> 00:53:30.380] Like there's, there's definitely ways to like, and then we can like help you with
+[00:53:30.380 -> 00:53:35.580] onboarding maybe. Right. Yeah. That could be interesting too. Okay. Other
+[00:53:35.580 -> 00:53:39.020] options for us to help as well. So that could be agents two, three, and four. Like
+[00:53:39.020 -> 00:53:42.940] I think of agents as like, as you know, people don't think it's employees and they're not
+[00:53:42.940 -> 00:53:47.180] really employees. They're like an employee is a collection of agents. Right. And so you do five
+[00:53:47.180 -> 00:53:52.180] things. One of those things is an agent or maybe half of that one thing is an agent. So like,
+[00:53:52.180 -> 00:53:54.820] start thinking like that and then we can like help you guys. Cause like, this is a great
+[00:53:54.820 -> 00:53:58.420] challenge. Like as your lean team and you have high net worth individuals, which means
+[00:53:58.420 -> 00:54:02.740] expectations are higher and you want to grow without expanding the team too much. Right. So
+[00:54:02.740 -> 00:54:08.420] this is like our sweet spot for sure. Okay. Great. Well, we'll look up, we'll look out for your
+[00:54:09.540 -> 00:54:15.940] brief on what you said you would send and then I'll probably connect with Andrew just to walk
+[00:54:15.940 -> 00:54:22.820] through everything and what we agreed on and get back to you with next steps probably by the end
+[00:54:22.820 -> 00:54:29.620] of the week or give me a, I will send you guys a, by tomorrow I'll send you a bill spec. It'll be
+[00:54:29.620 -> 00:54:33.540] like a one-liner. Here's what we're going to build for you and like three or four bullets.
+[00:54:33.540 -> 00:54:38.420] And here's what we're going to do specifically. Right. You'll have to just reply back and give
+[00:54:38.420 -> 00:54:42.020] me a thumbs up saying, Hey, build it. That's the point where we burn the credit and start
+[00:54:42.020 -> 00:54:46.100] a development process for you. And we can show prototype to you within a week after that. So
+[00:54:46.100 -> 00:54:51.380] like, yes, please discuss this with Andrew internally and then give us a thumbs up on
+[00:54:51.380 -> 00:54:55.300] that email and we'll start to build and we'll send you a prototype very quickly after that.
+[00:54:55.300 -> 00:55:02.480] Sounds great. Thank you so much. Thank you so much. Thank you. Very nice to meet you.
+[00:55:02.480 -> 00:55:05.680] Good to meet you guys too and hope to work with you guys for a while.
+[00:55:06.320 -> 00:55:08.560] If you have any other questions, just email us.
+[00:55:09.760 -> 00:55:12.880] Thank you. Cheers. Bye. Bye.

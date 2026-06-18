@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Verify · AW Portal{% endblock %}
+{% block body %}
+<div class="center card">
+  <h1>Two-factor verification</h1>
+  <p class="muted">Enter the 6-digit code from your authenticator app.</p>
+  <form method="post">
+    <div class="field"><label>Authentication code</label>
+      <input name="code" inputmode="numeric" pattern="[0-9]*" autofocus required></div>
+    <button class="btn" type="submit" style="width:100%">Verify</button>
+  </form>
+</div>
+{% endblock %}

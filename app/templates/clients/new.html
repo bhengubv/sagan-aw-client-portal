@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}New client · AW Portal{% endblock %}
+{% block body %}
+<h1>New client</h1>
+<div class="card">
+  <form method="post">
+    <div class="field"><label>Household name *</label>
+      <input name="display_name" placeholder="e.g. The Smith Household" autofocus required></div>
+    <h3>Primary person (Client 1)</h3>
+    <div class="row">
+      <div class="field"><label>Name</label><input name="c1_name" placeholder="Full name"></div>
+      <div class="field"><label>Date of birth</label><input name="c1_dob" type="date"></div>
+      <div class="field"><label>SSN (last 4)</label><input name="c1_ssn4" maxlength="4" inputmode="numeric"></div>
+    </div>
+    <button class="btn" type="submit">Create client</button>
+    <a class="btn ghost" href="{{ url_for('clients.list_clients') }}">Cancel</a>
+  </form>
+</div>
+{% endblock %}

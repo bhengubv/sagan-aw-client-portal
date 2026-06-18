@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block title %}{{ c.display_name }} · AW Portal{% endblock %}
+{% block body %}
+<div class="section-head">
+  <h1>{{ c.display_name }}</h1>
+  <div>
+    <a class="btn" href="{{ url_for('reports.new_report', cid=c.id) }}">Generate report</a>
+    <a class="btn secondary" href="{{ url_for('reports.history', cid=c.id) }}">History</a>
+  </div>
+</div>
+
+<div class="card">
+  <h2>People</h2>
+  <table>
+    <thead><tr><th>Role</th><th>Name</th><th>Age</th><th>DOB</th><th>SSN</th></tr></thead>
+    <tbody>
+      {% for p in c.persons %}
+      <tr><td><span class="pill joint">{{ p.role }}</span></td><td>{{ p.name }}</td>
+        <td>{{ p.age if p.age is not none else '—' }}</td>
+        <td>{{ p.dob or '—' }}</td><td>{{ 'x'+p.ssn_last4 if p.ssn_last4 else '—' }}</td></tr>
+      {% else %}<tr><td colspan="5" class="muted">No people yet.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+  <h3>Add person</h3>
+  <form method="post" action="{{ url_for('clients.add_person', cid=c.id) }}" class="row">
+    <div class="field"><label>Role</label><select name="role"><option>C2</option><option>C1</option></select></div>
+    <div class="field"><label>Name</label><input name="name" required></div>
+    <div class="field"><label>DOB</label><input name="dob" type="date"></div>
+    <div class="field"><label>SSN (last 4)</label><input name="ssn4" maxlength="4"></div>
+    <div class="field" style="display:flex;align-items:flex-end"><button class="btn small" type="submit">Add</button></div>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Accounts</h2>
+  <table>
+    <thead><tr><th>Type</th><th>Owner</th><th>Category</th><th>Last 4</th><th>Cash?</th><th></th></tr></thead>
+    <tbody>
+      {% for a in c.accounts %}
+      <tr><td>{{ a.type }}</td><td>{{ a.owner }}</td>
+        <td><span class="pill {{ 'ret' if a.category=='retirement' else 'non' }}">{{ a.category.replace('_',' ') }}</span></td>
+        <td>{{ 'x'+a.acct_last4 if a.acct_last4 else '—' }}</td>
+        <td>{{ 'yes' if a.has_cash_balance else '—' }}</td>
+        <td style="text-align:right"><form method="post" action="{{ url_for('clients.delete_account', cid=c.id, aid=a.id) }}" style="display:inline"><button class="btn ghost small">Remove</button></form></td></tr>
+      {% else %}<tr><td colspan="6" class="muted">No accounts yet.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+  <h3>Add account</h3>
+  <form method="post" action="{{ url_for('clients.add_account', cid=c.id) }}" class="row">
+    <div class="field"><label>Type</label><input name="type" placeholder="Roth IRA, Brokerage…" required></div>
+    <div class="field"><label>Owner</label><select name="owner"><option>JOINT</option><option>C1</option><option>C2</option></select></div>
+    <div class="field"><label>Category</label><select name="category"><option value="non_retirement">non-retirement</option><option value="retirement">retirement</option></select></div>
+    <div class="field"><label>Last 4</label><input name="acct_last4" maxlength="4"></div>
+    <div class="field"><label>Has cash</label><select name="has_cash"><option value="">no</option><option value="1">yes</option></select></div>
+    <div class="field" style="display:flex;align-items:flex-end"><button class="btn small" type="submit">Add</button></div>
+  </form>
+  <p class="muted" style="font-size:12.5px;margin-top:6px">Retirement accounts cannot be joint (enforced).</p>
+</div>
+
+<div class="card">
+  <h2>Trust</h2>
+  <form method="post" action="{{ url_for('clients.set_trust', cid=c.id) }}" class="inline">
+    <div><label>Property address (for Zillow value)</label>
+      <input name="property_address" value="{{ c.trust.property_address if c.trust else '' }}" placeholder="123 Main St, City"></div>
+    <button class="btn small" type="submit">Save trust</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Liabilities</h2>
+  <table>
+    <thead><tr><th>Type</th><th>Interest rate</th><th></th></tr></thead>
+    <tbody>
+      {% for li in c.liabilities %}
+      <tr><td>{{ li.type }}</td><td>{{ li.interest_rate }}%</td>
+        <td style="text-align:right"><form method="post" action="{{ url_for('clients.delete_liability', cid=c.id, lid=li.id) }}" style="display:inline"><button class="btn ghost small">Remove</button></form></td></tr>
+      {% else %}<tr><td colspan="3" class="muted">No liabilities.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+  <h3>Add liability</h3>
+  <form method="post" action="{{ url_for('clients.add_liability', cid=c.id) }}" class="row">
+    <div class="field"><label>Type</label><input name="type" placeholder="Mortgage, Auto…" required></div>
+    <div class="field"><label>Interest rate (%)</label><input name="interest_rate" placeholder="4.5"></div>
+    <div class="field" style="display:flex;align-items:flex-end"><button class="btn small" type="submit">Add</button></div>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Static financials</h2>
+  {% set s = c.static %}
+  <form method="post" action="{{ url_for('clients.set_static', cid=c.id) }}">
+    <div class="row">
+      <div class="field"><label>Monthly salary / inflow ($)</label><input name="inflow" value="{{ s.monthly_salary_inflow if s else '' }}"></div>
+      <div class="field"><label>Agreed expense budget / outflow ($)</label><input name="outflow" value="{{ s.monthly_expense_budget_outflow if s else '' }}"></div>
+      <div class="field"><label>Normal monthly expenses ($)</label><input name="expenses" value="{{ s.normal_monthly_expenses if s else '' }}"></div>
+    </div>
+    <div class="field"><label>Insurance deductibles (comma-separated $)</label>
+      <input name="deductibles" value="{{ (s.insurance_deductibles|join(', ')) if s and s.insurance_deductibles else '' }}" placeholder="1000, 2000, 1000"></div>
+    <button class="btn" type="submit">Save financials</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Client engagement</h2>
+  <div class="row">
+    <form method="post" action="{{ url_for('clients.onboard', cid=c.id) }}" class="inline" style="flex:1">
+      <div><label>Send onboarding invite to</label><input name="email" type="email" placeholder="client@email.com"></div>
+      <button class="btn small" type="submit">Send onboarding</button>
+    </form>
+    <form method="post" action="{{ url_for('clients.worksheet_invite', cid=c.id) }}" class="inline" style="flex:1">
+      <div><label>Send expense worksheet to</label><input name="email" type="email" placeholder="client@email.com"></div>
+      <button class="btn small" type="submit">Send worksheet</button>
+    </form>
+  </div>
+  <p class="muted" style="font-size:12.5px;margin-top:6px">Clients complete a secure link; submissions appear in the Staff inbox for approval.</p>
+</div>
+
+<div class="card">
+  <form method="post" action="{{ url_for('clients.delete_client', cid=c.id) }}" onsubmit="return confirm('Delete this client and all their data?')">
+    <button class="btn danger small" type="submit">Delete client</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,1 @@
+pymupdf==1.24.10  # tests only: PDF text verification

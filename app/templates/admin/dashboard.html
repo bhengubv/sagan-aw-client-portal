@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Platform admin · AW Portal{% endblock %}
+{% block body %}
+<h1>Platform admin</h1>
+<p class="muted">All firms on the platform, their usage, and billable totals (cost + 20%).</p>
+<div class="card">
+  <table>
+    <thead><tr><th>Firm</th><th>Status</th><th>Clients</th><th>Users</th><th>Usage (base)</th><th>Billable</th><th></th></tr></thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td><strong>{{ row.t.name }}</strong> <span class="muted">#{{ row.t.id }}</span></td>
+        <td><span class="pill {{ 'ret' if row.t.status=='active' else 'joint' }}">{{ row.t.status }}</span></td>
+        <td>{{ row.clients }}</td>
+        <td>{{ row.users }}</td>
+        <td class="muted">${{ row.summary.base_total }}</td>
+        <td><strong>${{ row.summary.billed_total }}</strong></td>
+        <td style="text-align:right">
+          {% if row.t.status == 'active' %}
+            <form method="post" action="{{ url_for('admin.suspend', tid=row.t.id) }}"><button class="btn danger small">Suspend</button></form>
+          {% else %}
+            <form method="post" action="{{ url_for('admin.activate', tid=row.t.id) }}"><button class="btn small">Reactivate</button></form>
+          {% endif %}
+        </td>
+      </tr>
+      {% else %}<tr><td colspan="7" class="muted">No tenants.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

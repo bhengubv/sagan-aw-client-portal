@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Report ready · {{ c.display_name }}{% endblock %}
+{% block body %}
+<div class="section-head">
+  <h1>Report ready — {{ c.display_name }}</h1>
+  <span class="muted">{{ run.period }} · generated {{ run.created_at.strftime('%Y-%m-%d %H:%M') }} UTC</span>
+</div>
+
+{% if flags %}
+<div class="flash warn">
+  <strong>⚠ {{ flags|length }} anomaly flag(s)</strong> vs last quarter — please review:
+  <ul style="margin:6px 0 0 18px">
+    {% for f in flags %}<li>{{ f.label }}: {{ f.reason }} (${{ f.prev }} → ${{ f.curr }})</li>{% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>SACS — cash flow</h2>
+  <div class="kpi">
+    <div class="box"><div class="l">Inflow</div><div class="v">${{ cv.sacs.inflow }}</div></div>
+    <div class="box"><div class="l">Outflow</div><div class="v">${{ cv.sacs.outflow }}</div></div>
+    <div class="box"><div class="l">Excess → reserve</div><div class="v">${{ cv.sacs.excess_to_reserve }}</div></div>
+    <div class="box"><div class="l">Reserve target</div><div class="v">${{ cv.sacs.reserve_target }}</div></div>
+  </div>
+  <p style="margin-top:12px"><a class="btn" href="{{ url_for('reports.sacs_pdf', rid=run.id) }}">⬇ Download SACS PDF</a></p>
+</div>
+
+<div class="card">
+  <h2>TCC — net worth</h2>
+  <div class="kpi">
+    <div class="box"><div class="l">Client 1 retirement</div><div class="v">${{ cv.tcc.c1_retirement_total }}</div></div>
+    <div class="box"><div class="l">Client 2 retirement</div><div class="v">${{ cv.tcc.c2_retirement_total }}</div></div>
+    <div class="box"><div class="l">Non-retirement</div><div class="v">${{ cv.tcc.non_retirement_total }}</div></div>
+    <div class="box"><div class="l">Trust</div><div class="v">${{ cv.tcc.trust_value }}</div></div>
+    <div class="box" style="background:#eef6ee"><div class="l">Grand total net worth</div><div class="v">${{ cv.tcc.grand_total_net_worth }}</div></div>
+    <div class="box" style="background:#fdeeee"><div class="l">Liabilities (separate)</div><div class="v">${{ cv.tcc.liabilities_total }}</div></div>
+  </div>
+  <p style="margin-top:12px"><a class="btn" href="{{ url_for('reports.tcc_pdf', rid=run.id) }}">⬇ Download TCC PDF</a></p>
+</div>
+
+<div class="card">
+  <h2>Distribute</h2>
+  <div class="row">
+    <form method="post" action="{{ url_for('reports.email_report', rid=run.id) }}" class="inline" style="flex:2">
+      <div><label>Email both PDFs to the client</label><input name="to_email" type="email" placeholder="client@email.com"></div>
+      <button class="btn small" type="submit">Email report</button>
+    </form>
+    <form method="post" action="{{ url_for('reports.dropbox_save', rid=run.id) }}" style="display:flex;align-items:flex-end">
+      <button class="btn secondary small" type="submit">Save to Dropbox</button>
+    </form>
+    <form method="post" action="{{ url_for('reports.canva_export', rid=run.id) }}" style="display:flex;align-items:flex-end">
+      <button class="btn secondary small" type="submit">Export to Canva</button>
+    </form>
+  </div>
+  <p class="muted" style="font-size:12.5px;margin-top:6px">Dropbox/Canva require those providers connected under Settings → Data providers.</p>
+  <p style="margin-top:12px">
+    <a class="btn ghost" href="{{ url_for('reports.new_report', cid=c.id) }}">Generate another</a>
+    <a class="btn ghost" href="{{ url_for('clients.detail', cid=c.id) }}">Back to profile</a>
+  </p>
+</div>
+{% endblock %}

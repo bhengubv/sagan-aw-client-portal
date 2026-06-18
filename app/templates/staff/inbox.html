@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Staff inbox · AW Portal{% endblock %}
+{% block body %}
+<div class="section-head">
+  <h1>Staff inbox</h1>
+  <form method="post" action="{{ url_for('staff.run_reminders') }}"><button class="btn small">Run onboarding reminders</button></form>
+</div>
+
+<div class="card">
+  <h2>Expense worksheets to approve ({{ pending|length }})</h2>
+  <table>
+    <thead><tr><th>Client</th><th>Salary</th><th>Budget</th><th>Expenses</th><th></th></tr></thead>
+    <tbody>
+      {% for s in pending %}
+      <tr>
+        <td>{{ clients.get(s.client_id, s.client_id) }}</td>
+        <td>${{ s.data.get('salary') }}</td><td>${{ s.data.get('expense_budget') }}</td>
+        <td>${{ s.data.get('expenses') }}</td>
+        <td style="text-align:right"><form method="post" action="{{ url_for('staff.approve_expense', sid=s.id) }}"><button class="btn small">Approve & apply</button></form></td>
+      </tr>
+      {% else %}<tr><td colspan="5" class="muted">Nothing pending.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if escalations %}
+<div class="card">
+  <h2>Onboarding escalations ({{ escalations|length }})</h2>
+  <table>
+    <thead><tr><th>Email</th><th>Reminders sent</th></tr></thead>
+    <tbody>{% for e in escalations %}<tr><td>{{ e.email }}</td><td>{{ e.reminders_sent }}</td></tr>{% endfor %}</tbody>
+  </table>
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>Outbox (last 50)</h2>
+  <table>
+    <thead><tr><th>When</th><th>To</th><th>Subject</th><th>Status</th></tr></thead>
+    <tbody>
+      {% for m in outbox %}
+      <tr><td class="muted">{{ m.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+        <td>{{ m.to_email }}</td><td>{{ m.subject }}{% if m.attachment_name %} <span class="pill non">📎 {{ m.attachment_name }}</span>{% endif %}</td>
+        <td><span class="pill {{ 'ret' if m.status in ('sent','recorded') else 'joint' }}">{{ m.status }}</span></td></tr>
+      {% else %}<tr><td colspan="4" class="muted">No messages yet.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "public/base.html" %}
+{% block title %}Onboarding · AW Client Portal{% endblock %}
+{% block body %}
+<div class="card">
+  <h1>Welcome — let's get you set up</h1>
+  <p class="muted">Please confirm your household details. This form is secure; only your advisor sees it.</p>
+  <form method="post">
+    <h3>You (Client 1)</h3>
+    <div class="row">
+      <div class="field"><label>Full name</label><input name="c1_name" required></div>
+      <div class="field"><label>Date of birth</label><input name="c1_dob" type="date"></div>
+      <div class="field"><label>SSN (last 4)</label><input name="c1_ssn4" maxlength="4" inputmode="numeric"></div>
+    </div>
+    <h3>Spouse / partner (Client 2, optional)</h3>
+    <div class="row">
+      <div class="field"><label>Full name</label><input name="c2_name"></div>
+      <div class="field"><label>Date of birth</label><input name="c2_dob" type="date"></div>
+      <div class="field"><label>SSN (last 4)</label><input name="c2_ssn4" maxlength="4" inputmode="numeric"></div>
+    </div>
+    <div class="field"><label>Anything we should know?</label><input name="notes"></div>
+    <button class="btn" type="submit">Submit securely</button>
+  </form>
+</div>
+{% endblock %}
