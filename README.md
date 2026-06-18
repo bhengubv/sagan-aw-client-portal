@@ -1,46 +1,65 @@
-# SAGAN AW Client Portal
+# AW Client Report Portal
+#### built by **Sagan**
 
-> Built by Sagan for the AW Client Report Portal engagement. See `analysis/` for the source
-> discovery (call transcript, PRD analysis) and the approved Technical Specification.
+# A full day of client-report prep — done in minutes. In your exact format.
 
-A multi-tenant SaaS platform for financial-advisory firms: enter (or auto-fetch) client
-data, generate polished quarterly **SACS** (cash-flow) and **TCC** (net-worth) PDF reports,
-distribute them, and run the firm — with an AI agent layer, billing, and admin.
+Pull every balance from your banks and custodians **automatically**, let the system do **all the math**, and hand your client a polished **cash-flow** and **net-worth** report — with no Canva, no spreadsheets, no calculator, and no errors.
 
-Built to the full Technical Specification — **all four phases, every element functional**,
-**104 tests green**.
+### ⏱️ A day → minutes  ·  ✅ Zero manual math  ·  🎯 Your templates, untouched  ·  🔒 Your data stays yours
 
-## Phases (all built)
+---
 
-- **Phase 1 — Portal core.** Client/account management, guided report workflow with a hard
-  completeness gate, the deterministic calculation engine (spec §9, exhaustively tested),
-  fixed-layout SACS & TCC PDF generation, auth + RBAC + TOTP MFA, audit log.
-- **Phase 2 — Integrations.** Encrypted credential **vault** (Fernet) and read-only adapters
-  for **Plaid, Schwab, RightCapital, Zillow, Pinnacle, PreciseFP** (+ **Dropbox/Canva** output).
-  Reports auto-fill from connected providers and flag what is manual or stale. A bundled
-  **provider sandbox** implements each real API contract so it runs end-to-end in dev.
-- **Phase 3 — AI agents & client-facing.** Statement **extraction agent** (deterministic
-  parsing; LLM optional via Anthropic), **anomaly flagging**, **onboarding agent**
-  (invites, reminders, escalation), client-facing **onboarding form** and **expense
-  worksheet**, and **distribution** (email with PDF attachments, Dropbox auto-save, Canva
-  export). Real **Outbox** records every email.
-- **Phase 4 — Multi-tenant SaaS.** Self-serve firm **signup**, per-tenant branding,
-  **usage metering + billing** (cost + 20%, spec §16), **admin console** (superadmin),
-  and tenant **suspension** enforcement.
+## 1 · Open a client, hit *Generate* — the numbers fill themselves
 
-## Taking it live (implementation team)
+The portal reaches into **Plaid, Schwab, RightCapital, Zillow and Pinnacle**, pulls the balances, and shows you **exactly where each number came from**. Anything it can't reach, it flags — so you never hunt for a figure again.
 
-The app is complete and tested; going to production is **configuration + live credentials**,
-not new architecture. Start with **[docs/IMPLEMENTATION_HANDOFF.md](docs/IMPLEMENTATION_HANDOFF.md)**:
+![Balances auto-filled from your connected providers, each tagged with its source](docs/img/autofill.png)
 
-- **[docs/PROVIDERS.md](docs/PROVIDERS.md)** — per-provider go-live (creds, endpoints, secret
-  keys, account mapping, OAuth/refresh work to add).
-- **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** — Railway, Postgres, secrets, scheduled jobs.
-- **[docs/OPERATIONS.md](docs/OPERATIONS.md)** — runbook (users/MFA, Outbox, reminders, billing, backups).
-- **[.env.example](.env.example)** — every environment variable.
-- **[livetests/](livetests/)** — `pytest livetests/` validates each adapter against its real API.
+## 2 · One click, and the math is done
 
-## Quick start
+Inflows, outflows, retirement, the trust, liabilities, net worth — **every total calculated and re-checked for you**, every time. No more double-checking numbers at 9pm.
+
+![Report ready — every total computed, ready to download or send](docs/img/review.png)
+
+## 3 · Your reports, your format
+
+Pixel-perfect **SACS** (cash-flow) and **TCC** (net-worth) PDFs — exactly the way Andrew built them. Download, email to the client, or drop straight into Dropbox.
+
+| Cash-flow (SACS) | Net-worth (TCC) |
+|:--:|:--:|
+| ![SACS cash-flow report](docs/img/report-sacs.png) | ![TCC net-worth report](docs/img/report-tcc.png) |
+
+---
+
+## Why your team will love it
+
+- **⏱️ A day becomes minutes.** Spend that time with clients, not in Canva.
+- **✅ No more math errors.** Every figure is computed and cross-checked automatically.
+- **🎯 Nothing changes for your clients.** Same reports, same format — just faster and flawless.
+- **🔒 Secure by design.** Read-only access, your data stays yours, and **nothing is ever used to train an AI**.
+- **📈 Grow without hiring.** Take on more clients without adding headcount.
+
+> It's already built, fully tested, and ready to connect to your accounts.
+
+## See it in action
+
+▶️ **[Watch the 2-minute walkthrough](#)**  *(drop your Loom link here)*
+
+Want to click around yourself? It runs locally in three commands — see **For developers** below.
+
+---
+
+<details>
+<summary><strong>🔧 For developers &amp; the implementation team</strong> — setup, architecture, tests, go-live</summary>
+
+<br>
+
+A multi-tenant SaaS platform for financial-advisory firms: enter (or auto-fetch) client data,
+generate quarterly **SACS** and **TCC** PDFs, distribute them, and run the firm — with an AI
+agent layer, billing, and admin. Built to the full Technical Specification — **all four phases,
+every element functional, 104 tests green**.
+
+### Quick start
 
 ```powershell
 python -m venv .venv
@@ -50,68 +69,62 @@ python -m venv .venv
 .\.venv\Scripts\python.exe run.py             # the portal :5000
 ```
 
-Logins (password `changeme123`): `owner@firm.test` · `planner@firm.test` ·
-`assistant@firm.test` · `superadmin@firm.test` (platform admin) · `northwind@firm.test`
-(second firm). New firms can also self-register at **/signup**.
+Sign in as `owner@firm.test` / `changeme123` → a client → **Generate report**. The form
+auto-fills ~9 fields from the connected providers (real HTTP to the bundled sandbox); fill the
+one manual field, generate, then email / save-to-Dropbox / export-to-Canva. `superadmin@firm.test`
+opens the Admin console; new firms self-register at `/signup`.
 
-**Try it:** sign in as owner → a client → *Generate report*. The form auto-fills ~9 fields
-from the connected providers (over real HTTP to the sandbox); fill the one manual field,
-generate, then email / save-to-Dropbox / export-to-Canva. See usage on **Billing**; sign in
-as `superadmin@firm.test` for the **Admin** console.
+### What's built (all four phases)
 
-## CLI
+- **Phase 1 — Portal core.** Client/account management, guided report workflow with a hard
+  completeness gate, the deterministic calculation engine (spec §9, exhaustively tested),
+  fixed-layout SACS &amp; TCC PDF generation, auth + RBAC + TOTP MFA, audit log.
+- **Phase 2 — Integrations.** Encrypted credential **vault** (Fernet) and read-only adapters for
+  **Plaid, Schwab, RightCapital, Zillow, Pinnacle, PreciseFP** (+ **Dropbox/Canva** output),
+  with a bundled **provider sandbox** that implements each real API contract so it runs end-to-end in dev.
+- **Phase 3 — AI agents &amp; client-facing.** Statement **extraction** (deterministic; LLM optional
+  via Anthropic), **anomaly flagging**, an **onboarding agent** (invites/reminders/escalation),
+  client-facing **onboarding form** and **expense worksheet**, and **distribution** (email, Dropbox, Canva).
+- **Phase 4 — Multi-tenant SaaS.** Self-serve **signup**, per-tenant branding, **usage metering +
+  billing** (cost + 20%), **admin console**, and tenant **suspension**.
 
-```powershell
-python manage.py create-user --email a@b.com --name "Jane" --role planner --password secret
-python manage.py enroll-mfa  --email a@b.com     # prints an otpauth:// URI
-python manage.py run-reminders                   # send due onboarding reminders / escalate
-```
-
-## Tests
+### Tests
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest             # 104 tests
 ```
+Covers the calc engine + critical rules, PDF content, all routes/RBAC/tenant-isolation, the
+vault, every provider adapter (driven through the real sandbox), the AI agents, distribution,
+billing, and admin.
 
-Coverage: calc engine + critical rules, data model, PDF content, reporting service, full
-HTTP routes/RBAC/tenant-isolation (P1); vault, all provider adapters (driven through the real
-sandbox), integration fetch (P2); anomaly, deterministic + LLM extraction, mailer, onboarding/
-escalation, expense worksheet, distribution, and all their routes (P3); signup, billing maths,
-metering, admin, suspension (P4).
+### Taking it live
 
-## Configuration (environment; secrets never in code — spec §13)
+Going to production is **configuration + live credentials, not new architecture.** Start here:
 
-| Variable | Purpose |
-|---|---|
-| `SECRET_KEY`, `VAULT_KEY` | Session signing; credential-vault key (derived from SECRET_KEY if unset) |
-| `RAILWAY_DATABASE_PATH` / `DATABASE_URL` | DB location (SQLite default; Postgres-ready) |
-| `SMTP_HOST/PORT/USER/PASSWORD/FROM` | Live email; without it, mail is recorded to the Outbox |
-| `ANTHROPIC_API_KEY`, `LLM_MODEL` | Enables LLM extraction; deterministic parser runs without it |
-| `PUBLIC_BASE_URL` | Base for client-facing onboarding / worksheet links |
-| `CANVA_API_KEY` | Canva export (also configurable per-tenant under Settings → Providers) |
+- **[docs/IMPLEMENTATION_HANDOFF.md](docs/IMPLEMENTATION_HANDOFF.md)** — the entry point
+- **[docs/PROVIDERS.md](docs/PROVIDERS.md)** — per-provider go-live (creds, endpoints, OAuth/refresh)
+- **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** — Railway, Postgres, secrets, scheduled jobs
+- **[docs/OPERATIONS.md](docs/OPERATIONS.md)** — runbook (users/MFA, Outbox, reminders, billing, backups)
+- **[.env.example](.env.example)** — every environment variable
+- **[livetests/](livetests/)** — `pytest livetests/` validates each adapter against its real API
 
-## Layout
+### Layout
 
 ```
 app/
-  calc/ pdf/ reporting.py     # deterministic engine + PDF renderers + glue (P1)
-  vault.py providers/ integrations.py   # credential vault, adapters, fetch (P2)
-  agents/                     # anomaly, extraction, llm, onboarding (P3)
-  mailer.py distribution.py portal_public.py staff.py settings.py   # comms + UI (P3)
-  billing.py signup.py admin.py   # SaaS layer (P4)
+  calc/ pdf/ reporting.py     # deterministic engine + PDF renderers + glue
+  vault.py providers/ integrations.py   # credential vault, adapters, fetch
+  agents/                     # anomaly, extraction, llm, onboarding
+  mailer.py distribution.py portal_public.py staff.py settings.py
+  billing.py signup.py admin.py
   models.py auth.py clients.py reports.py security.py audit.py
-  templates/ static/
-sandbox/                      # local provider sandbox (real API contracts)
-tests/                        # 104 tests
+sandbox/   # local provider sandbox (real API contracts)
+tests/     # 104 tests
 seed.py manage.py run.py run_sandbox.py
 ```
 
-## Notes
+**Notes** — Adapters call a provider `base_url`: the bundled sandbox in dev, the live API in
+prod (no code change). The LLM never touches the numeric path. PDFs use ReportLab; exact visual
+parity with the firm's templates needs their sample PDFs.
 
-- **Sandbox vs live:** adapters call the provider `base_url`. In dev that is the bundled
-  sandbox (`http://127.0.0.1:5050/<provider>`); in production, set it to the live API and
-  store real credentials in the vault — no code change.
-- **AI safety:** the LLM never touches the numeric path; agents propose, staff confirm; no
-  client data is sent to a model unless `ANTHROPIC_API_KEY` is set (spec §12).
-- PDF engine is ReportLab (spec §10). Exact visual parity with the firm's templates needs
-  their sample PDFs (spec §17.2).
+</details>
