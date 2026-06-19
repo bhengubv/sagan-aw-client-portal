@@ -13,12 +13,15 @@ if os.environ.get("DEMO_MODE") == "1":
     subprocess.run([sys.executable, "seed.py"], check=False)
 
 port = os.environ.get("PORT", "8000")
-# Two workers + threads so the portal can call the mounted sandbox on its own port.
+# One worker with several threads keeps memory low (fits free tiers) while still letting
+# the portal call the mounted sandbox on its own port (a thread serves the self-request).
+workers = os.environ.get("WEB_CONCURRENCY", "1")
+threads = os.environ.get("WEB_THREADS", "8")
 os.execvp("gunicorn", [
     "gunicorn", "app:create_app()",
     "--bind", f"0.0.0.0:{port}",
-    "--workers", "2",
-    "--threads", "4",
+    "--workers", workers,
+    "--threads", threads,
     "--timeout", "60",
     "--access-logfile", "-",
 ])
