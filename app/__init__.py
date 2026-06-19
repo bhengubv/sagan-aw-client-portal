@@ -79,4 +79,12 @@ def create_app(config_object=Config):
     with app.app_context():
         db.create_all()
 
+    # DEMO_MODE: mount the provider sandbox into this app at /provider-sandbox so the
+    # live auto-fill works on a single hosted service (no separate sandbox deploy needed).
+    # Real production leaves this off and points providers at live APIs (see docs/PROVIDERS.md).
+    if os.environ.get("DEMO_MODE") == "1":
+        from werkzeug.middleware.dispatcher import DispatcherMiddleware
+        from sandbox import create_sandbox_app
+        app.wsgi_app = DispatcherMiddleware(app.wsgi_app, {"/provider-sandbox": create_sandbox_app()})
+
     return app

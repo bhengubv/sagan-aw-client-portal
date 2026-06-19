@@ -18,7 +18,16 @@ from app.models import (Tenant, User, Client, Person, Account, Liability,
                         Trust, StaticFinancials, ProviderCredential)
 from app.vault import get_vault
 
-SANDBOX = "http://127.0.0.1:5050"
+import os
+
+# Where the provider sandbox lives. Locally it's a separate server on :5050.
+# On a DEMO_MODE deploy the sandbox is mounted into the app itself, so we call it
+# on the app's own port at /provider-sandbox.
+if os.environ.get("DEMO_MODE") == "1" and os.environ.get("PORT"):
+    SANDBOX = f"http://127.0.0.1:{os.environ['PORT']}/provider-sandbox"
+else:
+    SANDBOX = os.environ.get("SANDBOX_BASE_URL", "http://127.0.0.1:5050")
+
 PW = generate_password_hash("changeme123")
 
 
